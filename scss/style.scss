@@ -1,0 +1,194 @@
+/*==========================================*\
+----- CONTENT
+\*==========================================*/
+/*		                                *\
+----- Fonts
+----- Variables
+----- Mixins
+----- General
+
+----- MEDIA QUERIES
+\*__________________________________________*/
+/*===========================*\
+----- Variables
+\*===========================*/
+$bg-purle:        #611474;  //purple
+$page-title-pink: #e93189;  //pink
+$steg-bg-pink:    #e8308a;	//pink
+$white:           #fff;		//white
+$black:           #000;		//black
+$nav-hover:		  #ccc;		//gray
+$fi-share:        #008853;	//green
+
+
+/* General
+================================ */
+body{
+	font-family: "Myriad Pro" !important;
+}
+
+.uppercase{
+	text-transform:uppercase !important;
+}
+h1{
+	color:$page-title-pink;
+	font-size:46px;
+	font-weight:bold;
+	font-family: "Myriad Pro" !important;
+}
+
+h2,h3,h4,h5{
+	color:$white !important;
+	font-family: "Myriad Pro" !important;
+}
+
+p{
+	color:$black;
+	font-family: "Myriad Pro" !important;
+}
+
+h2{
+	font-size:36px;
+}
+
+h3{
+	font-size:20px;
+}
+
+h4{
+	color:$black;
+	font-size:15px;
+	text-transform:uppercase !important;
+}
+
+h5{
+	font-size:16px;
+}
+
+
+.active{
+	background-color: $white !important;
+	color:$black !important;
+}
+
+/* Layout
+================================ */
+.container{
+	background: url(../img/bg-start-cook.png) no-repeat;
+	margin:0 auto;
+	width: 810px;
+	min-height:1860px; 
+}
+
+.inner-contianer{
+	margin:0 auto;
+	width: 700px;
+	min-height:1750px; 
+}
+
+nav ul li{
+	list-style:none;
+	margin-right:2px;
+	margin-top:50px;
+}
+
+nav ul a{
+	&:hover{
+		background-color: $nav-hover !important;
+		color:$white !important;
+	}
+	padding:0 30px !important;
+}
+.start-title{
+	margin-top: 23px;
+}
+
+.steps{
+	margin-top:28px;
+}
+
+.callout-inner{
+	position: relative;
+	top: -15px;
+	padding-top: 9px;
+	border: solid 2px $white;
+	height: 100px;
+	h2{
+		font-size: 40px;
+		font-family:Myriad Pro;
+	}
+	h4{
+		font-weight:bold;
+		font-size: 13px;
+	}
+	h5{
+		font-size: 12px;
+	}
+}
+.panel.callout {
+	border: solid 0px; 
+	margin-bottom: 1.25rem;
+	padding: 1.25rem;
+	background: $steg-bg-pink;
+	color: $white;
+	height: 110px;
+}
+
+
+
+
+.contribution{
+	background: white;
+	height: 275px;
+	border: 14px solid $bg-purle;
+	h6{
+		color:$black;
+		font-size: 12px;
+		font-weight:bold;
+	}
+}
+
+.vote-button {
+	border-style: solid;
+	border-width: 0px;
+	cursor: pointer;
+	font-weight: normal;
+	line-height: normal;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	-webkit-appearance: none;
+	background-color: $black;
+	border-radius: 5px;
+	margin-top: 4px;
+	color: $white;
+}
+
+.logo{
+	position: relative;
+	bottom: -45px;
+	left: -10px;
+}
+
+/* Icons
+================================ */
+
+[class*="fi-"] {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+.fi-share{
+	color:$fi-share;
+}
+
+/* Media Queries
+================================ */
+
+@media (max-width: 768px) {
+	
+}
+
+
