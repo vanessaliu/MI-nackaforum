@@ -45,7 +45,7 @@ function getAndAddVote($contributionId){
     $stmt->close();
     $mysqli->close();
 
-    $vote = $vote + 1;
+    $vote = $vote + 1; // not working
     return $vote;
     
   }else{

@@ -97,7 +97,8 @@ $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <button class="uppercase tiny vote-button">Rösta</button>
+                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
+                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
                         </div>
                     </div>
 
@@ -139,7 +140,8 @@ $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <button class="uppercase tiny vote-button">Rösta</button>
+                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
+                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
                         </div>
                     </div>
 
@@ -179,7 +181,8 @@ $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <button class="uppercase tiny vote-button">Rösta</button>
+                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
+                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
                         </div>
                     </div>
 
@@ -227,7 +230,8 @@ $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <button class="uppercase tiny vote-button">Rösta</button>
+                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
+                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
                         </div>
                     </div>
 
@@ -260,7 +264,8 @@ $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <button class="uppercase tiny vote-button">Rösta</button>
+                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
+                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
                         </div>
                     </div>
 
