@@ -29,6 +29,7 @@ function getInstagramPhotosByTag($tag, $client_id, $limit){
   //echo $photos;
 }
 
+/*
 function getAndAddVote($contributionId){
   include ("connection_db.php");//inkluderar koppling till databasen
 
@@ -52,6 +53,6 @@ function getAndAddVote($contributionId){
     $mysqli->close();//stänger mysqli
     return 0;//returnerar 0
   }
-}
+}   */
 
 ?>
