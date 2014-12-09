@@ -2,6 +2,7 @@
 include ("header.php");
 include("functions.php");
 
+$photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', 9);
 ?>
 
 <div class="page" id="section-start">
@@ -81,7 +82,6 @@ include("functions.php");
         <div class="clearfix"></div>
 
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('nackaforummatochvin', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div class="contribution-inner">
@@ -97,8 +97,7 @@ include("functions.php");
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
-                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
+                            <button class="uppercase tiny vote-button">Rösta</button>
                         </div>
                     </div>
 
@@ -125,7 +124,6 @@ include("functions.php");
     <section>
         <div class="section-paginering"></div>
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('pony', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div class="contribution-inner">
@@ -141,8 +139,7 @@ include("functions.php");
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
-                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
+                            <button class="uppercase tiny vote-button">Rösta</button>
                         </div>
                     </div>
 
@@ -167,7 +164,6 @@ include("functions.php");
 
     <section>
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('pony', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div class="contribution-inner">
@@ -183,8 +179,7 @@ include("functions.php");
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
-                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
+                            <button class="uppercase tiny vote-button">Rösta</button>
                         </div>
                     </div>
 
@@ -217,7 +212,6 @@ include("functions.php");
         <div class="clearfix"></div>
 
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('pony', '9cd60ab846f743fcbc7a95d4c058dcc4', 4); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div class="contribution-inner">
@@ -233,8 +227,7 @@ include("functions.php");
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
-                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
+                            <button class="uppercase tiny vote-button">Rösta</button>
                         </div>
                     </div>
 
@@ -252,7 +245,6 @@ include("functions.php");
         <div class="clearfix"></div>
 
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('pony', '9cd60ab846f743fcbc7a95d4c058dcc4', 4); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div class="contribution-inner">
@@ -268,8 +260,7 @@ include("functions.php");
                             <!-- if likes->count = 0, addclass inactive to i -->
                             <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
-                            <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
-                            <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
+                            <button class="uppercase tiny vote-button">Rösta</button>
                         </div>
                     </div>
 

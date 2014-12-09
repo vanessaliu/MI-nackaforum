@@ -33,24 +33,26 @@ include ("functions.php");
       $stmt->fetch();
 
       if($stmt->num_rows == 1) { // EVENTUELLT ÄNDRA HÄR
-        echo "Bidraget finns redan!"; // TODO TESTA DETTA
+        echo "Bidraget finns redan!"; // TODO FUNKAR INTE
+
+        // "UPDATE contributions SET votes = votes +1"
 
 
 
-
-        // UPDATE contributions SET votes = votes +1
       } else {
         // Spara i databasen:
+        // TODO JUST NU SPARAS INGET I contributions
         $addContributionSql = "INSERT INTO contributions (instagram_id, votes) VALUES (?, ?)";
       
-
         if($stmt->prepare($addContributionSql)){
 
-          $stmt->bind_param("ii", $contributionId,$vote);
+          // $stmt->bind_param("ii", $contributionId,$vote);
+
           $stmt->execute();
           $stmt->close();
 
-          echo "Sparades i databas ";echo $vote;
+            // Nedan funkar, men inget sparas
+          echo "Sparades i contributions "; //echo $vote;
         }
       }
 
@@ -68,7 +70,7 @@ include ("functions.php");
         $stmt->execute();
         $stmt->close();
 
-        echo "Inlagt i databas";
+        echo "Inlagt i votes";
       }
 
 ?>
