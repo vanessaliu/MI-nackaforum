@@ -12,7 +12,7 @@
         <div class="section-pagination"></div>
 
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('pony', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
+            <?php $photos =  getInstagramPhotosByTag('nackaforummatochvin', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div class="contribution-inner">
