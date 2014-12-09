@@ -6,14 +6,21 @@ include ("connection_db.php");//inkluderar koppling till databasen
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
+    <title>Nacka Forum</title>
+
+    <!-- META -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nacka Forum</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Raleway:400,600,800,900|Open+Sans' rel='stylesheet' type='text/css'>
 
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Raleway:400' rel='stylesheet' type='text/css'>
+
+    <!-- MODERNIZR -->
     <script src="js/vendor/modernizr.js"></script>
   </head>
 

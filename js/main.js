@@ -10,9 +10,7 @@
     menuRouter();
     menuActiveItem();
 
-    $('.section-grid').each(function() {
-        $(this).find('.columns').last().addClass('end');
-    });
+    lastGridItemSelector();
 
     console.log('running');
 })();
@@ -88,5 +86,7 @@ function menuActiveItem() {
 }
 
 function lastGridItemSelector() {
-
+    $('.section-grid').each(function() {
+        $(this).find('.columns').last().addClass('end');
+    });
 }

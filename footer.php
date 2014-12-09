@@ -2,8 +2,8 @@
             <div class="logo"></div>
         </footer>
 
-      </div><!-- end of inner-container -->
-    </div><!-- end of container -->
+      </div>
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
