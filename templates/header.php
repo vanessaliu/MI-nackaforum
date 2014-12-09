@@ -13,7 +13,7 @@ include ("connection_db.php");//inkluderar koppling till databasen
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/vendor/foundation.css" />
+    <link rel="stylesheet" href="css/vendor/foundation.min.css" />
     <link rel="stylesheet" href="css/vendor/foundation-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
