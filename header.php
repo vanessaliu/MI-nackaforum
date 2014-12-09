@@ -1,7 +1,7 @@
 <?php
 include ("credentials.inc");//inkluderar filen credentials.inc
 include ("connection_db.php");//inkluderar koppling till databasen
-?>  
+?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -12,13 +12,16 @@ include ("connection_db.php");//inkluderar koppling till databasen
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,900' rel='stylesheet' type='text/css'>
+
     <script src="js/vendor/modernizr.js"></script>
   </head>
+
   <body>
+
     <div class="container">
-      <div class="inner-contianer"> 
-        <div class="row">
-           <div class="small-12 columns">
+      <div class="inner-container">
+
              <nav>
                <section class="top-bar-section">
                  <!-- Left Nav Section -->
@@ -27,9 +30,7 @@ include ("connection_db.php");//inkluderar koppling till databasen
                    <li><a class="uppercase" href="#">Alla bidrag</a></li>
                    <li><a class="uppercase" href="#">Topplista</a></li>
                    <li><a class="uppercase" href="#">Vinnare</a></li>
-                   <li><a class="uppercase" href="#">Regler & Priser</a></li>
+                   <li><a class="uppercase" href="#">Regler &amp; Priser</a></li>
                  </ul>
                </section>
              </nav>
-           </div>
-        </div>
