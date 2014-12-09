@@ -95,7 +95,7 @@ include("functions.php");
 
                         <div class="contribution-actions">
                             <!-- if likes->count = 0, addclass inactive to i -->
-                            <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
+                            <div><i class="fi-heart <?php if($photo->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
                             <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                             <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
@@ -139,7 +139,7 @@ include("functions.php");
 
                         <div class="contribution-actions">
                             <!-- if likes->count = 0, addclass inactive to i -->
-                            <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
+                            <div><i class="fi-heart <?php if($photo->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
                             <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                             <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
@@ -181,7 +181,7 @@ include("functions.php");
 
                         <div class="contribution-actions">
                             <!-- if likes->count = 0, addclass inactive to i -->
-                            <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
+                            <div><i class="fi-heart <?php if($photo->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
                             <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                             <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
@@ -231,7 +231,7 @@ include("functions.php");
 
                         <div class="contribution-actions">
                             <!-- if likes->count = 0, addclass inactive to i -->
-                            <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
+                            <div><i class="fi-heart <?php if($photo->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
                             <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                             <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
@@ -266,7 +266,7 @@ include("functions.php");
 
                         <div class="contribution-actions">
                             <!-- if likes->count = 0, addclass inactive to i -->
-                            <div><i class="fi-heart"><span><?php echo $photo->likes->count;?></span></i></div>
+                            <div><i class="fi-heart <?php if($photo->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->likes->count;?></span></i></div>
                             <div><i class="fi-share"></i></div>
                             <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                             <a href="vote.php?contribution_id=<?php echo $photo->user->id;?>" class="uppercase tiny vote-button">Rösta</a>
