@@ -356,71 +356,67 @@ section .section-grid .contribution-actions a {
 }
 
 /* line 330, ../scss/_layout.scss */
-#section-all section:nth-child(2) h3 {
-  padding-right: 7em;
-}
-/* line 333, ../scss/_layout.scss */
 #section-all section:nth-child(2) p {
-  padding-right: 9em;
+  padding-right: 10em;
 }
-/* line 337, ../scss/_layout.scss */
+/* line 334, ../scss/_layout.scss */
 #section-all .background-image {
-  top: 4em;
+  top: 2em;
   right: -4.8em;
   background-image: url("../img/chef.png");
 }
 
-/* line 348, ../scss/_layout.scss */
+/* line 345, ../scss/_layout.scss */
 #section-top section:nth-child(2) h3 {
   padding-right: 7em;
 }
-/* line 351, ../scss/_layout.scss */
+/* line 348, ../scss/_layout.scss */
 #section-top section:nth-child(2) p {
   padding-right: 12em;
 }
-/* line 355, ../scss/_layout.scss */
+/* line 352, ../scss/_layout.scss */
 #section-top .background-image {
   top: 4em;
   right: -4.8em;
   background-image: url("../img/chef.png");
 }
 
-/* line 366, ../scss/_layout.scss */
+/* line 363, ../scss/_layout.scss */
 #section-winners section:nth-child(2) h3 {
   padding-right: 7em;
 }
-/* line 369, ../scss/_layout.scss */
+/* line 366, ../scss/_layout.scss */
 #section-winners section:nth-child(2) p {
   padding-right: 8em;
 }
-/* line 373, ../scss/_layout.scss */
+/* line 370, ../scss/_layout.scss */
 #section-winners .background-image {
   top: 4em;
   right: -4.8em;
   background-image: url("../img/glass.png");
 }
 
-/* line 384, ../scss/_layout.scss */
+/* line 381, ../scss/_layout.scss */
 #section-rules section:nth-child(2) h3 {
   padding-right: 7em;
 }
-/* line 387, ../scss/_layout.scss */
+/* line 384, ../scss/_layout.scss */
 #section-rules section:nth-child(2) p {
   padding-right: 12em;
 }
-/* line 391, ../scss/_layout.scss */
+/* line 388, ../scss/_layout.scss */
 #section-rules .background-image {
   top: 4em;
   right: -4.8em;
   background-image: url("../img/glass.png");
 }
 
-/* line 400, ../scss/_layout.scss */
+/* line 397, ../scss/_layout.scss */
 footer {
   height: 7em;
   margin-top: 3em;
 }
-/* line 403, ../scss/_layout.scss */
+/* line 400, ../scss/_layout.scss */
 footer .logo {
   background-image: url("../img/logo.png");
   background-repeat: no-repeat;
