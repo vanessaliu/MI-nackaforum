@@ -1,13 +1,13 @@
 <?php
 include("functions.php");
-include("header.php");
+include("templates/header.php");
 
 // different page sections
-include("start.php");
-include("all.php");
-include("top.php");
-include("winners.php");
-include("rules.php");
+include("templates/start.php");
+include("templates/all.php");
+include("templates/top.php");
+include("templates/winners.php");
+include("templates/rules.php");
 
-include ("footer.php");
+include("templates/footer.php");
 ?>
