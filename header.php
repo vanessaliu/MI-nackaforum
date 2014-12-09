@@ -1,7 +1,7 @@
 <?php
 include ("credentials.inc");//inkluderar filen credentials.inc
 include ("connection_db.php");//inkluderar koppling till databasen
-?>  
+?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -12,24 +12,22 @@ include ("connection_db.php");//inkluderar koppling till databasen
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Raleway:400,600,800,900|Open+Sans' rel='stylesheet' type='text/css'>
+
     <script src="js/vendor/modernizr.js"></script>
   </head>
+
   <body>
-    <div class="container">
-      <div class="inner-contianer"> 
-        <div class="row">
-           <div class="small-12 columns">
-             <nav>
-               <section class="top-bar-section">
-                 <!-- Left Nav Section -->
-                 <ul class="left">
-                   <li><a class="uppercase active" href="#">Tävla</a></li>
-                   <li><a class="uppercase" href="#">Alla bidrag</a></li>
-                   <li><a class="uppercase" href="#">Topplista</a></li>
-                   <li><a class="uppercase" href="#">Vinnare</a></li>
-                   <li><a class="uppercase" href="#">Regler & Priser</a></li>
-                 </ul>
-               </section>
-             </nav>
-           </div>
-        </div>
+
+    <div id="wrapper">
+      <div class="container">
+
+        <nav id="navigation">
+            <ul>
+                <li data-target="tavla" class="active"><a>Tävla</a></li>
+                <li data-target="allabidrag"><a>Alla bidrag</a></li>
+                <li data-target="topplista"><a>Topplista</a></li>
+                <li data-target="vinnare"><a>Vinnare</a></li>
+                <li data-target="reglerochpriser"><a>Regler &amp; Priser</a></li>
+            </ul>
+        </nav>

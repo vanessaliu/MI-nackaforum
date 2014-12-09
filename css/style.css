@@ -13,209 +13,413 @@
 /*===========================*\
 ----- Variables
 \*===========================*/
-/* General
-================================ */
-/* line 32, ../scss/style.scss */
+/* line 54, ../scss/style.scss */
 #wrapper {
   background-color: black;
+  min-height: 60em;
 }
 
-/* line 36, ../scss/style.scss */
+/* line 60, ../scss/style.scss */
 .container {
-  background-color: purple;
+  background-color: #480856;
+  background-image: url("../img/bg-gradient.png");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
   height: 100%;
-  width: 60%;
+  min-height: 60em;
+  max-width: 48em;
+  margin: 0 auto;
+  padding: 2em 4.5em;
+}
+
+/* line 79, ../scss/style.scss */
+nav {
+  margin: 0 auto;
+  min-height: 7em;
+  padding: 2em 0;
+  max-width: 48em;
+}
+/* line 85, ../scss/style.scss */
+nav ul {
   margin: 0 auto;
 }
-
-/* line 43, ../scss/style.scss */
-nav {
-  width: 100%;
-}
-/* line 45, ../scss/style.scss */
-nav ul {
-  padding: 0;
-  margin: 0;
-}
-/* line 48, ../scss/style.scss */
+/* line 91, ../scss/style.scss */
 nav ul li {
+  padding: 10px 20px;
+  background-color: black;
   list-style-type: 0;
   display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: .8em;
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 300ms all ease-in-out;
+  cursor: pointer;
+}
+/* line 105, ../scss/style.scss */
+nav ul li a {
+  transition: 300ms all ease-in-out;
+  color: white;
+  border: 0;
+}
+/* line 109, ../scss/style.scss */
+nav ul li a:hover {
+  color: white;
+}
+/* line 114, ../scss/style.scss */
+nav ul li.active, nav ul li:hover {
+  color: black;
+  background-color: white;
+}
+/* line 117, ../scss/style.scss */
+nav ul li.active a, nav ul li:hover a {
+  color: black;
+}
+/* line 119, ../scss/style.scss */
+nav ul li.active a:hover, nav ul li:hover a:hover {
+  color: black;
 }
 
-/* line 55, ../scss/style.scss */
-nav ul li {
-  list-style: none;
-  margin-right: 2px;
-  margin-top: 50px;
+/* line 130, ../scss/style.scss */
+body {
+  font-family: "Raleway";
 }
 
-/* line 61, ../scss/style.scss */
-nav ul a {
-  padding: 0 30px;
+/* line 133, ../scss/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
 }
-/* line 62, ../scss/style.scss */
-nav ul a:hover {
-  background-color: #cccccc;
+
+/* line 138, ../scss/style.scss */
+h1, h3, h4, h5, h6 {
   color: white;
 }
 
-/* line 70, ../scss/style.scss */
+/* line 141, ../scss/style.scss */
+h2 {
+  color: #e8308a;
+  font-weight: 700;
+}
+
+/* line 145, ../scss/style.scss */
+h3 {
+  font-weight: 600;
+}
+
+/* line 148, ../scss/style.scss */
+p {
+  color: white;
+}
+
+/* line 151, ../scss/style.scss */
+a {
+  border-bottom: 1px solid white;
+  color: white;
+}
+/* line 156, ../scss/style.scss */
+a:hover, a:active, a:visited {
+  color: white;
+}
+
+/* line 162, ../scss/style.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 73, ../scss/style.scss */
-h1 {
-  color: #e93189;
-  font-size: 46px;
-  font-weight: bold;
-  font-family: "Myriad Pro";
+/* line 170, ../scss/style.scss */
+.page {
+  z-index: 1;
+  position: relative;
+}
+/* line 173, ../scss/style.scss */
+.page section {
+  z-index: 2;
+}
+/* line 176, ../scss/style.scss */
+.page .background-image {
+  background-position: top right;
+  background-repeat: no-repeat;
+  width: 20em;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
-/* line 80, ../scss/style.scss */
-h2, h3, h4, h5 {
-  color: white;
-  font-family: "Myriad Pro";
-}
-
-/* line 85, ../scss/style.scss */
-p {
-  color: black;
-  font-family: "Myriad Pro";
-}
-
-/* line 90, ../scss/style.scss */
-h2 {
-  font-size: 36px;
-}
-
-/* line 94, ../scss/style.scss */
-h3 {
-  font-size: 20px;
-}
-
-/* line 98, ../scss/style.scss */
-h4 {
-  color: black;
-  font-size: 15px;
+/* line 186, ../scss/style.scss */
+button {
+  background-color: #e82f8a;
+  border-radius: .5em;
+  padding: .5em 4em;
+  font-family: "Josefin Sans";
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* line 104, ../scss/style.scss */
-h5 {
-  font-size: 16px;
+/* line 195, ../scss/style.scss */
+section {
+  padding: .5em 0;
 }
-
-/* line 109, ../scss/style.scss */
-.active {
+/* line 197, ../scss/style.scss */
+section .section-header {
+  margin: 1em 0;
+  position: relative;
+}
+/* line 200, ../scss/style.scss */
+section .section-header h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+/* line 205, ../scss/style.scss */
+section .section-header a {
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: .3em;
+  font-weight: 700;
+  font-family: "Josefin Sans";
+  font-size: .9em;
+}
+/* line 217, ../scss/style.scss */
+section .section-grid .contribution {
+  padding: 0;
+}
+/* line 219, ../scss/style.scss */
+section .section-grid .contribution .contribution-inner {
+  padding: .5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
   background-color: white;
-  color: black;
+}
+/* line 224, ../scss/style.scss */
+section .section-grid .contribution .contribution-inner h5 {
+  overflow: hidden;
+  padding: .2em 0;
+  margin: 0;
+  text-transform: none;
+  color: #2c2c2c;
+  font-family: "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-overflow: ellipsis;
+}
+/* line 235, ../scss/style.scss */
+section .section-grid .contribution .contribution-inner .contribution-image {
+  overflow: hidden;
+  height: 11em;
+}
+/* line 238, ../scss/style.scss */
+section .section-grid .contribution .contribution-inner .contribution-image img {
+  width: 100%;
+}
+/* line 244, ../scss/style.scss */
+section .section-grid .contribution:nth-child(3n) .contribution-inner {
+  margin-right: 0;
+}
+/* line 249, ../scss/style.scss */
+section .section-grid .contribution-actions {
+  height: 3em;
+  padding: 1em 0;
+  position: relative;
+}
+/* line 253, ../scss/style.scss */
+section .section-grid .contribution-actions div {
+  display: inline-block;
+}
+/* line 255, ../scss/style.scss */
+section .section-grid .contribution-actions div i {
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  border-radius: .2em;
+  padding: .2em .6em;
+  font-size: 1em;
+}
+/* line 261, ../scss/style.scss */
+section .section-grid .contribution-actions div i.fi-heart {
+  color: #e8308a;
+}
+/* line 263, ../scss/style.scss */
+section .section-grid .contribution-actions div i.fi-heart.inactive {
+  color: #e5e5e5;
+}
+/* line 267, ../scss/style.scss */
+section .section-grid .contribution-actions div i.fi-share {
+  color: #008853;
+}
+/* line 270, ../scss/style.scss */
+section .section-grid .contribution-actions div i span {
+  font-size: .9em;
+  vertical-align: center;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  padding-left: .4em;
+  color: #2c2c2c;
+}
+/* line 281, ../scss/style.scss */
+section .section-grid .contribution-actions button {
+  border: 1px solid black;
+  background-color: black;
+  position: absolute;
+  right: 0;
+  top: 1.1em;
+  border-radius: .2em;
+  padding: .4em .8em;
+  font-size: .8em;
+}
+
+/* line 300, ../scss/style.scss */
+#section-start section:nth-child(2) h3 {
+  padding-right: 7em;
+}
+/* line 303, ../scss/style.scss */
+#section-start section:nth-child(2) p {
+  padding-right: 12em;
+}
+/* line 307, ../scss/style.scss */
+#section-start .background-image {
+  background-image: url("../img/chef.png");
+  top: 4em;
+  right: -4.8em;
+}
+
+/* line 313, ../scss/style.scss */
+.rules-grid {
+  margin: 10px 0;
+}
+/* line 315, ../scss/style.scss */
+.rules-grid h4 {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+/* line 321, ../scss/style.scss */
+.rules-grid p {
+  font-size: 0.8em;
+}
+/* line 324, ../scss/style.scss */
+.rules-grid span {
+  color: white;
+  font-size: 3em;
+  font-weight: 700;
+  font-family: "Josefin Sans";
+  line-height: .9em;
+}
+/* line 331, ../scss/style.scss */
+.rules-grid .columns {
+  padding: 0;
+  margin: 0;
+}
+/* line 335, ../scss/style.scss */
+.rules-grid .rules-column {
+  padding: 1em;
+  height: 150px;
+  padding: 10px;
+  position: relative;
+}
+/* line 341, ../scss/style.scss */
+.rules-grid .rules-column:nth-of-type(odd) .column-inner {
+  right: 5px;
+}
+/* line 346, ../scss/style.scss */
+.rules-grid .rules-column:nth-of-type(even) .column-inner {
+  left: 5px;
+}
+/* line 350, ../scss/style.scss */
+.rules-grid .rules-column .column-inner {
+  background-color: #e82f8a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  padding: 1em;
+}
+/* line 359, ../scss/style.scss */
+.rules-grid .rules-column .column-inner .column-border {
+  border: 2px solid white;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+}
+/* line 369, ../scss/style.scss */
+.rules-grid .rules-column .column-inner .small-11 {
+  padding-left: 1em;
+}
+
+/* line 379, ../scss/style.scss */
+#section-all section:nth-child(2) h3 {
+  padding-right: 7em;
+}
+/* line 382, ../scss/style.scss */
+#section-all section:nth-child(2) p {
+  padding-right: 12em;
+}
+/* line 386, ../scss/style.scss */
+#section-all .background-image {
+  top: 4em;
+  right: -4.8em;
+  background-image: url("../img/chef.png");
+}
+
+/* line 394, ../scss/style.scss */
+#section-top section:nth-child(2) h3 {
+  padding-right: 7em;
+}
+/* line 397, ../scss/style.scss */
+#section-top section:nth-child(2) p {
+  padding-right: 12em;
+}
+/* line 401, ../scss/style.scss */
+#section-top .background-image {
+  top: 4em;
+  right: -4.8em;
+  background-image: url("../img/chef.png");
+}
+
+/* line 409, ../scss/style.scss */
+#section-winners section:nth-child(2) h3 {
+  padding-right: 7em;
+}
+/* line 412, ../scss/style.scss */
+#section-winners section:nth-child(2) p {
+  padding-right: 12em;
+}
+/* line 416, ../scss/style.scss */
+#section-winners .background-image {
+  top: 4em;
+  right: -4.8em;
+  background-image: url("../img/glass.png");
+}
+
+/* line 424, ../scss/style.scss */
+#section-rules section:nth-child(2) h3 {
+  padding-right: 7em;
+}
+/* line 427, ../scss/style.scss */
+#section-rules section:nth-child(2) p {
+  padding-right: 12em;
+}
+/* line 431, ../scss/style.scss */
+#section-rules .background-image {
+  top: 4em;
+  right: -4.8em;
+  background-image: url("../img/glass.png");
 }
 
 /* Layout
 ================================ */
-/* line 118, ../scss/style.scss */
-.inner-container {
-  margin: 0 auto;
-  width: 700px;
-  min-height: 1750px;
-}
-
-/* line 125, ../scss/style.scss */
-.start-title {
-  margin-top: 23px;
-}
-
-/* line 129, ../scss/style.scss */
-.steps {
-  margin-top: 28px;
-}
-
-/* line 133, ../scss/style.scss */
-.callout-inner {
-  position: relative;
-  top: -15px;
-  padding-top: 9px;
-  border: solid 2px white;
-  height: 100px;
-}
-/* line 139, ../scss/style.scss */
-.callout-inner h2 {
-  font-size: 40px;
-  font-family: Myriad Pro;
-}
-/* line 143, ../scss/style.scss */
-.callout-inner h4 {
-  font-weight: bold;
-  font-size: 13px;
-}
-/* line 147, ../scss/style.scss */
-.callout-inner h5 {
-  font-size: 12px;
-}
-
-/* line 151, ../scss/style.scss */
-.panel.callout {
-  border: solid 0px;
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
-  background: #e8308a;
-  color: white;
-  height: 110px;
-}
-
-/* line 163, ../scss/style.scss */
-.contribution {
-  background: white;
-  height: 275px;
-  border: 14px solid #611474;
-}
-/* line 167, ../scss/style.scss */
-.contribution h6 {
-  color: black;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* line 174, ../scss/style.scss */
-.vote-button {
-  border-style: solid;
-  border-width: 0px;
-  cursor: pointer;
-  font-weight: normal;
-  line-height: normal;
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  -webkit-appearance: none;
-  background-color: black;
-  border-radius: 5px;
-  margin-top: 4px;
-  color: white;
-}
-
-/* line 190, ../scss/style.scss */
-.logo {
-  position: relative;
-  bottom: -45px;
-  left: -10px;
-}
-
 /* Icons
 ================================ */
-/* line 199, ../scss/style.scss */
-[class*="fi-"] {
-  font-size: 20px;
-  text-align: center;
-  display: block;
-  margin-top: 10px;
-}
-
-/* line 206, ../scss/style.scss */
-.fi-share {
-  color: #008853;
-}
-
 /* Media Queries
 ================================ */
