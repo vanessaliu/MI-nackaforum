@@ -7,6 +7,7 @@
 ----- Mixins
 ----- General
 
+
 ----- MEDIA QUERIES
 \*__________________________________________*/
 /*===========================*\
@@ -14,114 +15,129 @@
 \*===========================*/
 /* General
 ================================ */
-/* line 26, ../scss/style.scss */
-body {
-  font-family: "Myriad Pro" !important;
+/* line 32, ../scss/style.scss */
+#wrapper {
+  background-color: black;
 }
 
-/* line 30, ../scss/style.scss */
-.uppercase {
-  text-transform: uppercase !important;
-}
-
-/* line 33, ../scss/style.scss */
-h1 {
-  color: #e93189;
-  font-size: 46px;
-  font-weight: bold;
-  font-family: "Myriad Pro" !important;
-}
-
-/* line 40, ../scss/style.scss */
-h2, h3, h4, h5 {
-  color: white !important;
-  font-family: "Myriad Pro" !important;
-}
-
-/* line 45, ../scss/style.scss */
-p {
-  color: black;
-  font-family: "Myriad Pro" !important;
-}
-
-/* line 50, ../scss/style.scss */
-h2 {
-  font-size: 36px;
-}
-
-/* line 54, ../scss/style.scss */
-h3 {
-  font-size: 20px;
-}
-
-/* line 58, ../scss/style.scss */
-h4 {
-  color: black;
-  font-size: 15px;
-  text-transform: uppercase !important;
-}
-
-/* line 64, ../scss/style.scss */
-h5 {
-  font-size: 16px;
-}
-
-/* line 69, ../scss/style.scss */
-.active {
-  background-color: white !important;
-  color: black !important;
-}
-
-/* line 74, ../scss/style.scss */
-.red {
-  color: red;
-}
-
-/* Layout
-================================ */
-/* line 79, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 .container {
-  background: url(../img/bg-start-cook.png) no-repeat;
+  background-color: purple;
+  height: 100%;
+  width: 60%;
   margin: 0 auto;
-  width: 810px;
-  min-height: 1860px;
 }
 
-/* line 86, ../scss/style.scss */
-.inner-contianer {
-  margin: 0 auto;
-  width: 700px;
-  min-height: 1750px;
+/* line 43, ../scss/style.scss */
+nav {
+  width: 100%;
+}
+/* line 45, ../scss/style.scss */
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 48, ../scss/style.scss */
+nav ul li {
+  list-style-type: 0;
+  display: inline-block;
 }
 
-/* line 92, ../scss/style.scss */
+/* line 55, ../scss/style.scss */
 nav ul li {
   list-style: none;
   margin-right: 2px;
   margin-top: 50px;
 }
 
-/* line 98, ../scss/style.scss */
+/* line 61, ../scss/style.scss */
 nav ul a {
-  padding: 0 30px !important;
+  padding: 0 30px;
 }
-/* line 99, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 nav ul a:hover {
-  background-color: #cccccc !important;
-  color: white !important;
+  background-color: #cccccc;
+  color: white;
 }
 
-/* line 105, ../scss/style.scss */
+/* line 70, ../scss/style.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 73, ../scss/style.scss */
+h1 {
+  color: #e93189;
+  font-size: 46px;
+  font-weight: bold;
+  font-family: "Myriad Pro";
+}
+
+/* line 80, ../scss/style.scss */
+h2, h3, h4, h5 {
+  color: white;
+  font-family: "Myriad Pro";
+}
+
+/* line 85, ../scss/style.scss */
+p {
+  color: black;
+  font-family: "Myriad Pro";
+}
+
+/* line 90, ../scss/style.scss */
+h2 {
+  font-size: 36px;
+}
+
+/* line 94, ../scss/style.scss */
+h3 {
+  font-size: 20px;
+}
+
+/* line 98, ../scss/style.scss */
+h4 {
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* line 104, ../scss/style.scss */
+h5 {
+  font-size: 16px;
+}
+
+/* line 109, ../scss/style.scss */
+.active {
+  background-color: white;
+  color: black;
+}
+
+/* line 114, ../scss/style.scss */
+.red {
+  color: red;
+}
+
+/* Layout
+================================ */
+/* line 121, ../scss/style.scss */
+.inner-container {
+  margin: 0 auto;
+  width: 700px;
+  min-height: 1750px;
+}
+
+/* line 128, ../scss/style.scss */
 .start-title {
   margin-top: 23px;
 }
 
-/* line 109, ../scss/style.scss */
+/* line 132, ../scss/style.scss */
 .steps {
   margin-top: 28px;
 }
 
-/* line 113, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 .callout-inner {
   position: relative;
   top: -15px;
@@ -129,22 +145,22 @@ nav ul a:hover {
   border: solid 2px white;
   height: 100px;
 }
-/* line 119, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 .callout-inner h2 {
   font-size: 40px;
   font-family: Myriad Pro;
 }
-/* line 123, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .callout-inner h4 {
   font-weight: bold;
   font-size: 13px;
 }
-/* line 127, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 .callout-inner h5 {
   font-size: 12px;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 .panel.callout {
   border: solid 0px;
   margin-bottom: 1.25rem;
@@ -154,20 +170,20 @@ nav ul a:hover {
   height: 110px;
 }
 
-/* line 143, ../scss/style.scss */
+/* line 166, ../scss/style.scss */
 .contribution {
   background: white;
   height: 275px;
   border: 14px solid #611474;
 }
-/* line 147, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .contribution h6 {
   color: black;
   font-size: 12px;
   font-weight: bold;
 }
 
-/* line 154, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 .vote-button {
   border-style: solid;
   border-width: 0px;
@@ -184,7 +200,7 @@ nav ul a:hover {
   color: white;
 }
 
-/* line 170, ../scss/style.scss */
+/* line 193, ../scss/style.scss */
 .logo {
   position: relative;
   bottom: -45px;
@@ -193,7 +209,7 @@ nav ul a:hover {
 
 /* Icons
 ================================ */
-/* line 179, ../scss/style.scss */
+/* line 202, ../scss/style.scss */
 [class*="fi-"] {
   font-size: 20px;
   text-align: center;
@@ -201,7 +217,7 @@ nav ul a:hover {
   margin-top: 10px;
 }
 
-/* line 186, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 .fi-share {
   color: #008853;
 }
