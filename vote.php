@@ -32,12 +32,10 @@ include ("functions.php");
       $stmt->store_result();
       $stmt->fetch();
 
-      if($stmt->num_rows == 1) { // EVENTUELLT ÄNDRA HÄR
+      if($stmt->num_rows === 1) { // EVENTUELLT ÄNDRA HÄR
         echo "Bidraget finns redan!"; // TODO FUNKAR INTE
 
         // "UPDATE contributions SET votes = votes +1"
-
-
 
       } else {
         // Spara i databasen:

@@ -10,10 +10,11 @@
     menuRouter();
     menuActiveItem();
 
-    // check the last of each columnsies
-    $('.section-grid .columns').last().addClass('end');
+    $('.section-grid').each(function() {
+        $(this).find('.columns').last().addClass('end');
+    });
 
-    console.log('running', $('.section-grid .columns').last());
+    console.log('running');
 })();
 
 function menuSwitcher() {
