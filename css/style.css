@@ -72,9 +72,14 @@ h5 {
   color: black !important;
 }
 
+/* line 74, ../scss/style.scss */
+.red {
+  color: red;
+}
+
 /* Layout
 ================================ */
-/* line 76, ../scss/style.scss */
+/* line 79, ../scss/style.scss */
 .container {
   background: url(../img/bg-start-cook.png) no-repeat;
   margin: 0 auto;
@@ -82,41 +87,41 @@ h5 {
   min-height: 1860px;
 }
 
-/* line 83, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
 .inner-contianer {
   margin: 0 auto;
   width: 700px;
   min-height: 1750px;
 }
 
-/* line 89, ../scss/style.scss */
+/* line 92, ../scss/style.scss */
 nav ul li {
   list-style: none;
   margin-right: 2px;
   margin-top: 50px;
 }
 
-/* line 95, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 nav ul a {
   padding: 0 30px !important;
 }
-/* line 96, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 nav ul a:hover {
   background-color: #cccccc !important;
   color: white !important;
 }
 
-/* line 102, ../scss/style.scss */
+/* line 105, ../scss/style.scss */
 .start-title {
   margin-top: 23px;
 }
 
-/* line 106, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 .steps {
   margin-top: 28px;
 }
 
-/* line 110, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .callout-inner {
   position: relative;
   top: -15px;
@@ -124,22 +129,22 @@ nav ul a:hover {
   border: solid 2px white;
   height: 100px;
 }
-/* line 116, ../scss/style.scss */
+/* line 119, ../scss/style.scss */
 .callout-inner h2 {
   font-size: 40px;
   font-family: Myriad Pro;
 }
-/* line 120, ../scss/style.scss */
+/* line 123, ../scss/style.scss */
 .callout-inner h4 {
   font-weight: bold;
   font-size: 13px;
 }
-/* line 124, ../scss/style.scss */
+/* line 127, ../scss/style.scss */
 .callout-inner h5 {
   font-size: 12px;
 }
 
-/* line 128, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 .panel.callout {
   border: solid 0px;
   margin-bottom: 1.25rem;
@@ -149,20 +154,20 @@ nav ul a:hover {
   height: 110px;
 }
 
-/* line 140, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 .contribution {
   background: white;
   height: 275px;
   border: 14px solid #611474;
 }
-/* line 144, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .contribution h6 {
   color: black;
   font-size: 12px;
   font-weight: bold;
 }
 
-/* line 151, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 .vote-button {
   border-style: solid;
   border-width: 0px;
@@ -179,7 +184,7 @@ nav ul a:hover {
   color: white;
 }
 
-/* line 167, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .logo {
   position: relative;
   bottom: -45px;
@@ -188,7 +193,7 @@ nav ul a:hover {
 
 /* Icons
 ================================ */
-/* line 176, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 [class*="fi-"] {
   font-size: 20px;
   text-align: center;
@@ -196,7 +201,7 @@ nav ul a:hover {
   margin-top: 10px;
 }
 
-/* line 183, ../scss/style.scss */
+/* line 186, ../scss/style.scss */
 .fi-share {
   color: #008853;
 }

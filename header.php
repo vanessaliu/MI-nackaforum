@@ -23,8 +23,8 @@ include ("connection_db.php");//inkluderar koppling till databasen
                <section class="top-bar-section">
                  <!-- Left Nav Section -->
                  <ul class="left">
-                   <li><a class="uppercase active" href="#">Tävla</a></li>
-                   <li><a class="uppercase" href="#">Alla bidrag</a></li>
+                   <li><a class="uppercase active" href="index.php">Tävla</a></li>
+                   <li><a class="uppercase" href="allcontributions.php">Alla bidrag</a></li>
                    <li><a class="uppercase" href="#">Topplista</a></li>
                    <li><a class="uppercase" href="#">Vinnare</a></li>
                    <li><a class="uppercase" href="#">Regler & Priser</a></li>
