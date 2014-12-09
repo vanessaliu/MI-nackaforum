@@ -1,0 +1,34 @@
+///////////////////////////////////////////////////////////////////////////////
+/// general ///
+///////////////////////////////////////////////////////////////////////////////
+
+$bg-purple:        #480856; //#611474;  //purple
+
+$page-title-pink: #e93189;  //pink
+
+$accentpink:      #e8308a;  // pink for headline
+$pink-bg:         #e82f8a;  // pink for bg / grid
+
+$white:           #fff;     //white
+$black:           #000;     //black
+$nav-hover:       #ccc;     //gray
+
+$accentgreen:        #008853;   //green
+
+$border: #e5e5e5;
+$darktext: #2c2c2c;
+
+$bg-gradient: url('../img/bg-gradient.png');
+$bg-chef: url('../img/chef.png');
+$bg-glass: url('../img/glass.png');
+$logo: url('../img/logo.png');
+
+
+
+$headingfont: 'Josefin Sans';
+$basefont: 'Raleway';
+$sans-serif: 'Arial', sans-serif;
+
+@mixin uppercaselink {
+    text-transform: uppercase;
+}
