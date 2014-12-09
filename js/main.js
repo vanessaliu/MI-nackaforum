@@ -32,7 +32,7 @@ function menuRouter() {
 
         var path = $(location).attr('href');
         var pieces = path.split('/');
-        var url = pieces[6];
+        var url = pieces[5];
         console.log(path, pieces, url);
 
         switch(url) {
