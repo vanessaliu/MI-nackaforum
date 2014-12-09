@@ -26,7 +26,7 @@ include("functions.php");
 <div class="row">
 <?php
   
-  $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', 9);
+  $photos = getInstagramPhotosByTag('nackaforummatochvin', '9cd60ab846f743fcbc7a95d4c058dcc4', 9);
     
     foreach ($photos->data as $photo) {
 ?>
