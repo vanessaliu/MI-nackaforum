@@ -10,7 +10,10 @@
     menuRouter();
     menuActiveItem();
 
-    console.log('running');
+    // check the last of each columnsies
+    $('.section-grid .columns').last().addClass('end');
+
+    console.log('running', $('.section-grid .columns').last());
 })();
 
 function menuSwitcher() {
@@ -83,3 +86,6 @@ function menuActiveItem() {
     $('li[data-target=' + url + ']').addClass('active');
 }
 
+function lastGridItemSelector() {
+
+}
