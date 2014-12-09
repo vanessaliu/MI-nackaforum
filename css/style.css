@@ -271,38 +271,42 @@ section .section-grid .contribution-actions a {
   padding: .4em .8em;
   font-size: .8em;
 }
+/* line 244, ../scss/_layout.scss */
+section .section-pagination {
+  padding: 1.5em 0;
+}
 
-/* line 250, ../scss/_layout.scss */
+/* line 254, ../scss/_layout.scss */
 #section-start section:nth-child(2) h3 {
   padding-right: 7em;
 }
-/* line 253, ../scss/_layout.scss */
+/* line 257, ../scss/_layout.scss */
 #section-start section:nth-child(2) p {
   padding-right: 12em;
 }
-/* line 257, ../scss/_layout.scss */
+/* line 261, ../scss/_layout.scss */
 #section-start .background-image {
   background-image: url("../img/chef.png");
   top: 4em;
   right: -4.8em;
 }
 
-/* line 263, ../scss/_layout.scss */
+/* line 267, ../scss/_layout.scss */
 .rules-grid {
   margin: 10px 0;
 }
-/* line 265, ../scss/_layout.scss */
+/* line 269, ../scss/_layout.scss */
 .rules-grid h4 {
   font-size: 1em;
   font-weight: 700;
   padding: 0;
   margin: 0;
 }
-/* line 271, ../scss/_layout.scss */
+/* line 275, ../scss/_layout.scss */
 .rules-grid p {
   font-size: 0.8em;
 }
-/* line 274, ../scss/_layout.scss */
+/* line 278, ../scss/_layout.scss */
 .rules-grid span {
   color: white;
   font-size: 3em;
@@ -310,27 +314,27 @@ section .section-grid .contribution-actions a {
   font-family: "Josefin Sans";
   line-height: .9em;
 }
-/* line 281, ../scss/_layout.scss */
+/* line 285, ../scss/_layout.scss */
 .rules-grid .columns {
   padding: 0;
   margin: 0;
 }
-/* line 285, ../scss/_layout.scss */
+/* line 289, ../scss/_layout.scss */
 .rules-grid .rules-column {
   padding: 1em;
   height: 150px;
   padding: 10px;
   position: relative;
 }
-/* line 291, ../scss/_layout.scss */
+/* line 295, ../scss/_layout.scss */
 .rules-grid .rules-column:nth-of-type(odd) .column-inner {
   right: 5px;
 }
-/* line 296, ../scss/_layout.scss */
+/* line 300, ../scss/_layout.scss */
 .rules-grid .rules-column:nth-of-type(even) .column-inner {
   left: 5px;
 }
-/* line 300, ../scss/_layout.scss */
+/* line 304, ../scss/_layout.scss */
 .rules-grid .rules-column .column-inner {
   background-color: #e82f8a;
   position: absolute;
@@ -341,7 +345,7 @@ section .section-grid .contribution-actions a {
   height: 100%;
   padding: 1em;
 }
-/* line 309, ../scss/_layout.scss */
+/* line 313, ../scss/_layout.scss */
 .rules-grid .rules-column .column-inner .column-border {
   border: 2px solid white;
   position: absolute;
@@ -350,73 +354,65 @@ section .section-grid .contribution-actions a {
   bottom: 4px;
   right: 4px;
 }
-/* line 319, ../scss/_layout.scss */
+/* line 323, ../scss/_layout.scss */
 .rules-grid .rules-column .column-inner .small-11 {
   padding-left: 1em;
 }
 
-/* line 330, ../scss/_layout.scss */
-#section-all section:nth-child(2) p {
-  padding-right: 10em;
-}
 /* line 334, ../scss/_layout.scss */
-#section-all .background-image {
-  top: 2em;
-  right: -4.8em;
-  background-image: url("../img/chef.png");
-}
-
-/* line 345, ../scss/_layout.scss */
-#section-top section:nth-child(2) h3 {
-  padding-right: 7em;
-}
-/* line 348, ../scss/_layout.scss */
-#section-top section:nth-child(2) p {
+#section-all section:nth-child(2) p {
   padding-right: 12em;
 }
-/* line 352, ../scss/_layout.scss */
-#section-top .background-image {
-  top: 4em;
+/* line 338, ../scss/_layout.scss */
+#section-all .background-image {
+  top: -0.5em;
   right: -4.8em;
   background-image: url("../img/chef.png");
 }
 
-/* line 363, ../scss/_layout.scss */
-#section-winners section:nth-child(2) h3 {
-  padding-right: 7em;
+/* line 349, ../scss/_layout.scss */
+#section-top section:nth-child(2) p {
+  padding-right: 10.5em;
 }
-/* line 366, ../scss/_layout.scss */
+/* line 353, ../scss/_layout.scss */
+#section-top .background-image {
+  top: -0.5em;
+  right: -4.8em;
+  background-image: url("../img/chef.png");
+}
+
+/* line 364, ../scss/_layout.scss */
 #section-winners section:nth-child(2) p {
-  padding-right: 8em;
+  padding-right: 10em;
 }
-/* line 370, ../scss/_layout.scss */
+/* line 368, ../scss/_layout.scss */
 #section-winners .background-image {
-  top: 4em;
+  top: -0.5em;
   right: -4.8em;
   background-image: url("../img/glass.png");
 }
-
-/* line 381, ../scss/_layout.scss */
-#section-rules section:nth-child(2) h3 {
-  padding-right: 7em;
+/* line 373, ../scss/_layout.scss */
+#section-winners .section-header h3 {
+  font-size: 1.3em;
 }
-/* line 384, ../scss/_layout.scss */
+
+/* line 382, ../scss/_layout.scss */
 #section-rules section:nth-child(2) p {
   padding-right: 12em;
 }
-/* line 388, ../scss/_layout.scss */
+/* line 386, ../scss/_layout.scss */
 #section-rules .background-image {
-  top: 4em;
-  right: -4.8em;
+  top: -1em;
+  right: -2em;
   background-image: url("../img/glass.png");
 }
 
-/* line 397, ../scss/_layout.scss */
+/* line 395, ../scss/_layout.scss */
 footer {
   height: 7em;
-  margin-top: 3em;
+  margin-top: 4em;
 }
-/* line 400, ../scss/_layout.scss */
+/* line 398, ../scss/_layout.scss */
 footer .logo {
   background-image: url("../img/logo.png");
   background-repeat: no-repeat;

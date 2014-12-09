@@ -1,8 +1,6 @@
-        <div class="row logo">
-          <div class="small-3 pull-left columns">
-          <img src="img/logo.png" height="116" width="209" alt="nacka-forum-logo">
-          </div>
-        </div>
+        <footer>
+            <div class="logo"></div>
+        </footer>
 
       </div><!-- end of inner-container -->
     </div><!-- end of container -->

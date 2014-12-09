@@ -9,7 +9,8 @@
     </section>
 
     <section>
-        <div class="section-paginering"></div>
+        <div class="section-pagination"></div>
+
         <div class="section-grid">
             <?php $photos =  getInstagramPhotosByTag('pony', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
@@ -35,8 +36,10 @@
                 </div>
             <?php } ?>
         </div>
-
         <div class="clearfix"></div>
+
+        <div class="section-pagination"></div>
+
     </section>
 
 </div>
