@@ -1,17 +1,14 @@
 ///////////////////////////////////////////////////////////////////////////////
-/// general ///
+/// variables ///
 ///////////////////////////////////////////////////////////////////////////////
 
-$bg-purple:        #480856; //#611474;  //purple
-
-$page-title-pink: #e93189;  //pink
+$bg-purple:        #480856; //purple
 
 $accentpink:      #e8308a;  // pink for headline
 $pink-bg:         #e82f8a;  // pink for bg / grid
 
 $white:           #fff;     //white
 $black:           #000;     //black
-$nav-hover:       #ccc;     //gray
 
 $accentgreen:        #008853;   //green
 
@@ -29,6 +26,3 @@ $headingfont: 'Josefin Sans';
 $basefont: 'Raleway';
 $sans-serif: 'Arial', sans-serif;
 
-@mixin uppercaselink {
-    text-transform: uppercase;
-}
