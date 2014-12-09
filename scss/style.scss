@@ -34,6 +34,7 @@ $darktext: #2c2c2c;
 $bg-gradient: url('../img/bg-gradient.png');
 $bg-chef: url('../img/chef.png');
 $bg-glass: url('../img/glass.png');
+$logo: url('../img/logo.png');
 
 
 
@@ -70,8 +71,21 @@ body {
     margin: 0 auto;
     padding: 2em 4.5em;
 }
-
-
+///////////////////////////////////////////////////////////////////////////////
+/// elements ///
+///////////////////////////////////////////////////////////////////////////////
+button {
+    background-color: $pink-bg;
+    border-radius: .5em;
+    padding: .5em 4em;
+    font-family: $headingfont;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:hover {
+        background-color: darken($pink-bg, 10%);
+    }
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 /// navigation ///
@@ -183,15 +197,7 @@ p a {
     }
 }
 
-button {
-    background-color: $pink-bg;
-    border-radius: .5em;
-    padding: .5em 4em;
-    font-family: $headingfont;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+
 section {
     padding: .5em 0;
     .section-header {
@@ -380,7 +386,7 @@ section {
             padding-right: 7em;
         }
         p {
-            padding-right: 12em;
+            padding-right: 9em;
         }
     }
     .background-image {
@@ -410,7 +416,7 @@ section {
             padding-right: 7em;
         }
         p {
-            padding-right: 12em;
+            padding-right: 8em;
         }
     }
     .background-image {
@@ -432,6 +438,18 @@ section {
         top: 4em;
         right: -4.8em;
         background-image: $bg-glass;
+    }
+}
+
+footer {
+    height: 7em;
+    margin-top: 3em;
+    .logo {
+        background-image: $logo;
+        background-repeat: no-repeat;
+        background-position: top left;
+        width: 11em;
+        height: 6em;
     }
 }
 

@@ -82,3 +82,4 @@ function menuActiveItem() {
 
     $('li[data-target=' + url + ']').addClass('active');
 }
+
