@@ -12,43 +12,57 @@ include ("functions.php");
 
 
 // TEST NEDAN:
-if (isset($_GET['contribution_id'])) {
+if(isset($_GET['contribution_id'])) {
   $fbUserId = 1;// ska hämtar facebook user's uniqe id
   $contributionId = $_GET["contribution_id"];
   // $votes = getAndAddVote($contributionId);
   $vote = 1;
+  // $updateVote = $vote++; // TEST
 
   echo "Vi har en contribution_id! ";
   echo $_GET["contribution_id"];
   echo "<br />";
 
-  $checkExistingContributionSQL = "SELECT instagram_id FROM contributions WHERE instagram_id = ?";
 
-  if( $stmt = $mysqli->prepare($checkExistingContributionSQL)) {
-    $user_id = 1;
-    $stmt->bind_param("i", $instagramId);
-    $stmt->execute();
-    $stmt->bind_result($instagramId);
-    $stmt->store_result();
-    $stmt->fetch();
+  // $checkExistingContributionSQL = "SELECT instagram_id FROM contributions WHERE instagram_id = ?";
 
-    if($stmt->num_rows == 1) {
-      // update +1  FUNKAR EJ!! TODO
+  // if($stmt = $mysqli->prepare($checkExistingContributionSQL)) {
+  //   // $user_id = 1;
+  //   $stmt->bind_param("i", $contributionId);
+  //   $stmt->execute();
+  //   $stmt->bind_result($instagramId);
+  //   $stmt->store_result();
+  //   $stmt->fetch();
+
+  //   echo $instagramId;
+
+    // if($stmt->num_rows > 0) { // FUNKAR EJ!! TODO
+      // update +1  
+
+    // TODO Funkar, men gör precis allt i contributions. Behöver hindra den från att skapa ny row om already existing
+
+
+
+      echo "Denna finns i databasen!";
       $updateContributiosSQL = "UPDATE contributions SET votes = votes +1 WHERE instagram_id = ?";
-      
+      // prepared statement here, to look for the right row! 
+      if($stmt = $mysqli->prepare($updateContributiosSQL)) {
+        $stmt->bind_param("i", $contributionId); // TEST
+        $stmt->execute();
+      }
 
-      
       // return $updateContributiosSQL;
-    } else {
+    // } else {
       // insert into FUNKAR!!
+      echo "Denna fanns INTE i databasen, men har lagts till nu.";
       $addContributionSql = "INSERT INTO contributions (instagram_id, votes) VALUES (?, ?)";
 
-      if( $stmt->prepare($addContributionSql)) {
+      if($stmt->prepare($addContributionSql)) {
         $stmt->bind_param("ii", $contributionId, $vote);
         $stmt->execute();
       }
-    }
-  }
+    // }
+  // }
 } else {
   // This happens if someone enters the page without clicking vote:
   echo "Det finns inget att se här, gå din väg!";
