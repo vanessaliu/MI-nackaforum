@@ -19,8 +19,7 @@ if(isset($_GET['contribution_id'])) {
   $vote = 1;
   // $updateVote = $vote++; // TEST
 
-  echo "Vi har en contribution_id! ";
-  echo $_GET["contribution_id"];
+  echo "Vi har en contribution_id: " . $contributionId;
   echo "<br />";
 
 
@@ -42,8 +41,9 @@ if(isset($_GET['contribution_id'])) {
     // TODO Funkar, men gör precis allt i contributions. Behöver hindra den från att skapa ny row om already existing
 
 
-
-      echo "Denna finns i databasen!";
+    // if()
+      // echo "Denna finns i databasen! <br />";
+      // Works because instagram_id is a unique value in the database
       $updateContributiosSQL = "UPDATE contributions SET votes = votes +1 WHERE instagram_id = ?";
       // prepared statement here, to look for the right row! 
       if($stmt = $mysqli->prepare($updateContributiosSQL)) {
@@ -54,8 +54,9 @@ if(isset($_GET['contribution_id'])) {
       // return $updateContributiosSQL;
     // } else {
       // insert into FUNKAR!!
-      echo "Denna fanns INTE i databasen, men har lagts till nu.";
-      $addContributionSql = "INSERT INTO contributions (instagram_id, votes) VALUES (?, ?)";
+      // echo "Denna fanns INTE i databasen, men har lagts till nu. <br />";
+      $addContributionSql = "INSERT INTO contributions (instagram_id, votes)
+                             VALUES (?, ?)";
 
       if($stmt->prepare($addContributionSql)) {
         $stmt->bind_param("ii", $contributionId, $vote);
@@ -65,7 +66,7 @@ if(isset($_GET['contribution_id'])) {
   // }
 } else {
   // This happens if someone enters the page without clicking vote:
-  echo "Det finns inget att se här, gå din väg!";
+  echo "Det finns inget att se här, gå din väg! <br />";
 }
 /*
     
