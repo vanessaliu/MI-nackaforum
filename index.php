@@ -1,7 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <?php
+
+/*
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
@@ -79,6 +78,9 @@ if ( isset( $session ) ) {
   // skriv ut användar objectet
   // echo '<pre>' . print_r( $graphObject, 1 ) . '</pre>';
   // echo "Hello Chen";
+
+*/
+
   include("functions.php");
   include("templates/header.php");
 
@@ -91,18 +93,12 @@ if ( isset( $session ) ) {
 
   include("templates/footer.php");
 
-} else {
+//  } else {
   // login url [installera app]
+  
+/*
   $helper = new FacebookRedirectLoginHelper('https://www.facebook.com/nackaforumChen/app_1386865751606193');
   echo '<a href="' . $helper->getLoginUrl( array( 'email', 'user_friends' ) ) . '" target="_top">Login</a>';
 }
-
+  */
 ?>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body>
-</html>
