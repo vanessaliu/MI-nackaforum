@@ -246,13 +246,12 @@ section {
 
     }
 }
-
 ///////////////////////////////////////////////////////////////////////////////
 /// section-welcome ///
 ///////////////////////////////////////////////////////////////////////////////
 #container-welcome{
     min-height: 55em;
-    
+
     .rules-column {
         border-radius: 50%;
         padding: 1em;
@@ -327,7 +326,7 @@ section {
     h3{
         font-size: 30px;
     }
-    
+
     .background-image {
         background-image: $bg-welcome-glass;
         top: 14em;

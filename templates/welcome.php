@@ -2,17 +2,17 @@
 $session = $pageHelper->getSession();
 
 if ( isset( $session ) ) {
-  
+
   //Visa user id
   // echo 'User Id: ' . $pageHelper->getUserId();
- 
+
   // graph api call för att få user data
   // $request = new FacebookRequest( $session, 'GET', '/me' );
   // $response = $request->execute();
-  
+
   // Hantera svaret
   // $graphObject = $response->getGraphObject()->asArray();
-  
+
   // skriv ut användar objectet
   // echo '<pre>' . print_r( $graphObject, 1 ) . '</pre>';
   // echo "Hello Chen";
@@ -62,7 +62,9 @@ if ( isset( $session ) ) {
                     <h2>Ladda upp din bästa matbild</h2>
                     <h3>Vinn en matkasse med varor utvalda av kocken Tommy Myllymäki</h3>
                 </section>
+
             </div>
+
             <div class="small-4 columns rules-column">
                 <div class="column-inner">
                     <div class="column-border"></div>
