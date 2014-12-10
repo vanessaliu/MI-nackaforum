@@ -104,21 +104,43 @@ if(isset($_GET['contribution_id'])) {
       }$stmt->close();
 
     }
+*/
 
-    $addVoteSql = "INSERT INTO votes (user, contribution_id) VALUES (?,?)";
-    $stmt = $mysqli->stmt_init();
 
-      if($stmt->prepare($addVoteSql)){
+    // Look for duplicates in votes table:
+    $checkForDuplicatesSQL = "SELECT user, contribution_id FROM votes WHERE user = ? AND contribution_id = ?";
+    if( $stmt = $mysqli->prepare($checkForDuplicatesSQL)) {
+      $user_id = 1;
+      $stmt->bind_param("ii", $fbUserId, $contributionId);
+      $stmt->execute();
+      $stmt->bind_result($fbUserId, $contributionId);
+      $stmt->store_result();
+      $stmt->fetch();
+      echo "Funkar if-satsen?";
 
-        $stmt->bind_param("ii", $fbUserId, $contributionId);
-        $stmt->execute();
-        
+      if($stmt->num_rows > 0) {
+        echo "You already voted for this! <br />";
+        $stmt->close();
+      } else {
+        $addVoteSQL = "INSERT INTO votes (user, contribution_id) VALUES (?,?)";
+        $stmt = $mysqli->stmt_init();
 
-        echo "Inlagt i votes";
-      }
-      $stmt->close();
+        if($stmt->prepare($addVoteSQL)){
 
-      */
+          $stmt->bind_param("ii", $fbUserId, $contributionId);
+          $stmt->execute();        
+
+          echo "Inlagt i votes";
+        }
+      
+      }$stmt->close();
+    }
+
+
+    // Nedan funkar för att slänga in saker i votes, men hindrar inte duplicates:
+    
+
+      
 
 ?>
 
