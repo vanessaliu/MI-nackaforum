@@ -1,5 +1,6 @@
 <?php
 
+
 function getUserId($instagram_username, $client_id){
   $url='https://api.instagram.com/v1/users/search?q='.strtolower($instagram_username).'&client_id='.$client_id;
 
@@ -29,7 +30,7 @@ function getInstagramPhotosByTag($tag, $client_id, $limit){
   //echo $photos;
 }
 
-/*
+
 function getAndAddVote($contributionId){
   include ("connection_db.php");//inkluderar koppling till databasen
 
@@ -37,7 +38,7 @@ function getAndAddVote($contributionId){
 
   $stmt=$mysqli->stmt_init();
 
-  if($stmt -> prepare($tasks_sql)){
+  if($stmt->prepare($tasks_sql)){
     $stmt->bind_result($vote);
     $stmt->execute();
 
@@ -46,13 +47,13 @@ function getAndAddVote($contributionId){
     $stmt->close();
     $mysqli->close();
 
-    $vote = $vote + 1; // not working
-    return $vote;
+    // $vote = $vote + 1; // not working
+    // return $vote;
     
-  }else{
+  } else {
     $mysqli->close();//stänger mysqli
     return 0;//returnerar 0
   }
-}   */
+}
 
 ?>

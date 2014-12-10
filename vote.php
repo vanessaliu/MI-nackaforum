@@ -1,15 +1,13 @@
 <?php
 include ("header.php");//inkluderar filen header.php
 include ("functions.php");
-?>
-<?php
 
     // TODO: Hindra att användare kan rösta flera ggr på samma bidrag
     // TODO: +1 i votes.
 
     $fbUserId = 1;// ska hämtar facebook user's uniqe id
     $contributionId = $_GET["contribution_id"]; 
-    // $vote = getAndAddVote($contributionId);
+    $votes = getAndAddVote($contributionId);
 
         // TODO:
     // Lagra ett bidrag i databasen, när någon klickar på rösta-knappen
@@ -19,40 +17,37 @@ include ("functions.php");
 
 
 
-    $stmt = $mysqli->stmt_init();
-
-    // Kolla att bidraget inte redan finns i databasen
+    
+    
     $checkExistingContribution = "SELECT instagram_id FROM contributions WHERE instagram_id = ?";
-
+    $addContributionSql = "INSERT INTO contributions (instagram_id, votes) VALUES (?, ?)";
+    
+    $stmt = $mysqli->stmt_init();
+    // Kolla att bidraget inte redan finns i databasen
     if($stmt = $mysqli->prepare($checkExistingContribution)) {
-      // ngt på denna rad??
-      $stmt->bind_param("i", $instagram_id);
+      // $user_id = 1; // ???
+      $stmt->bind_param("i", $instagramId);
       $stmt->execute();
-      $stmt->bind_result($instagram_id);
+      $stmt->bind_result($instagramId);
       $stmt->store_result();
       $stmt->fetch();
 
-      if($stmt->num_rows === 1) { // EVENTUELLT ÄNDRA HÄR
+      if($stmt->num_rows == 1) { // EVENTUELLT ÄNDRA HÄR
         echo "Bidraget finns redan!"; // TODO FUNKAR INTE
 
         // "UPDATE contributions SET votes = votes +1"
 
-      } else {
+      } else  {
         // Spara i databasen:
-        // TODO JUST NU SPARAS INGET I contributions
-        $addContributionSql = "INSERT INTO contributions (instagram_id, votes) VALUES (?, ?)";
+        // TODO JUST NU SPARAS INGET I contributions       
       
-        if($stmt->prepare($addContributionSql)){
-
-          // $stmt->bind_param("ii", $contributionId,$vote);
-
+        if($stmt->prepare($addContributionSql)) {
+          $stmt->bind_param("ii", $contributionId, $votes);
           $stmt->execute();
-          $stmt->close();
-
-            // Nedan funkar, men inget sparas
+            // Nedan triggas, men inget sparas
           echo "Sparades i contributions "; //echo $vote;
         }
-      }
+      }$stmt->close();
 
     }
 
