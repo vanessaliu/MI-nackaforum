@@ -246,8 +246,104 @@ section {
 
     }
 }
+
 ///////////////////////////////////////////////////////////////////////////////
-/// section-tart ///
+/// section-welcome ///
+///////////////////////////////////////////////////////////////////////////////
+#container-welcome{
+    min-height: 55em;
+    
+    .rules-column {
+        border-radius: 50%;
+        padding: 1em;
+        height: 200px;
+        padding: 10px;
+        position: relative;
+        top: 90px;
+        left: 70px;
+        .column-inner {
+            background-color: $pink-bg;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            padding: 1em;
+            .column-border {
+                border: 2px solid white;
+                border-radius: 50%;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                bottom: 4px;
+                right: 4px;
+            }
+            h4{
+                font-size: 18px;
+                font-weight: bold;
+                position: relative;
+                top: 54px;
+                left: 0px;
+                text-align: center;
+
+            }
+            a {
+                // MAKE GRADIENT
+                border: 1px solid black;
+                background-color: black;
+                position: relative;
+                top: 60px;
+                left: 37px;
+                border-radius: .2em;
+                padding: .4em .8em;
+                font-size: .8em;
+            }
+        }
+    }
+}
+.page-welcome {
+    z-index: 1;
+    position: relative;
+    section {
+        z-index: 2;
+    }
+    .background-image {
+        background-position: top right;
+        background-repeat: no-repeat;
+        width: 21em;
+        height: 321%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+#section-welcome {
+    h2 {
+        padding-top: 0.5em;
+        font-size: 40px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    
+    .background-image {
+        background-image: $bg-welcome-glass;
+        top: 14em;
+        right: -2.8em;
+    }
+}
+
+
+#welcome-footer{
+    height: 7em;
+    margin-top: 30em;
+    margin-left: 1em;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+/// section-start ///
 ///////////////////////////////////////////////////////////////////////////////
 #section-start {
     section:nth-child(2) {
