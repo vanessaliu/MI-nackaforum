@@ -70,7 +70,7 @@
     <section>
         <div class="section-header">
             <h3>Senaste bidragen</h3>
-            <a href="">Se alla bidrag</a>
+            <a data-target="allabidrag" class="pagelink">Se alla bidrag</a>
         </div>
         <div class="clearfix"></div>
 

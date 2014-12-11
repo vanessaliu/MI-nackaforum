@@ -8,13 +8,15 @@
 
     var page1 = $('.page1'),
         page2 = $('.page2');
-        
+
     page2.hide();
     nextPage();
 
     menuSwitcher();
     menuRouter();
     menuActiveItem();
+
+    modal();
 
     lastGridItemSelector();
 
@@ -47,8 +49,17 @@ function menuSwitcher() {
     pages.hide();
 
     var navItem = $('#navigation ul li');
+    var pageLink = $('.pagelink');
 
     navItem.on('click', function() {
+        var page = $(this).attr('data-target');
+        console.log('pushed', page);
+        window.location = '#/' + page;
+        menuRouter();
+        menuActiveItem();
+    });
+
+    pageLink.on('click', function() {
         var page = $(this).attr('data-target');
         console.log('pushed', page);
         window.location = '#/' + page;
@@ -118,4 +129,14 @@ function lastGridItemSelector() {
     });
 }
 
- 
+
+function modal() {
+    $('.open-modal').on('click', function() {
+        var imageId = $(this).attr('data-id');
+        $.ajax('/loadImage.php?imageId=' + imageId, function(data) {
+            console.log(data);
+        });
+        console.log(imageId);
+        // window.location = 'url?postId=' + id;
+    });
+}
