@@ -9,7 +9,7 @@
         som består av bland annat Tommy Myllymäki, 4 vinnare. Var med och tävla
         du också och ta chansen att vinna en lyxig matkasse värd 1200 kr utvald
         av kocken Tommy Myllymäki.</p>
-        <button>Tävla här</button>
+        <button data-target="tavla" class="pagelink">Tävla här</button>
     </section>
 
     <section>

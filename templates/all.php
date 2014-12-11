@@ -1,20 +1,20 @@
-<?php 
+<?php
     $picPerPage=9;
     $photoAll = getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', 0);
     $totalcontributions=count($photoAll->data);
 
     if ($totalcontributions%$picPerPage==0) {
-        $totalPages= $totalcontributions/$picPerPage; 
+        $totalPages= $totalcontributions/$picPerPage;
     }else{
         $totalPages= floor($totalcontributions/$picPerPage)+1;
     }
 
-    $photos1 =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', $picPerPage); 
+    $photos1 =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', $picPerPage);
     $photos2=json_decode(file_get_contents($photos1->pagination->next_url));
     // $photos3=json_decode(file_get_contents($photos2->pagination->next_url));
     // $photos4=json_decode(file_get_contents($photos3->pagination->next_url));
 
-    for ($i=1; $i <= $totalPages; $i++) { 
+    for ($i=1; $i <= $totalPages; $i++) {
       // echo $i;
       // echo "<br>";
       // echo (string)$i;// echo "<br>";
@@ -34,7 +34,7 @@
         <h2>Alla bidrag</h2>
         <p>Här ser du alla bidrag i tävlingen. Var med och tävla du också och ta
         chansen att vinna en lyxig matkasse värd 1200 kr utvald av kocken Tommy Myllymäki.</p>
-        <button>Tävla här</button>
+        <button data-target="tavla" class="pagelink">Tävla här</button>
     </section>
 
     <section>
@@ -42,12 +42,12 @@
             <p> Totalsidor: <?php echo $totalPages?></p>
             <a href="" id="prev">Föregående</a>
             <a href="" id="next">Nästa</a>
-            
+
 
         </div>
 
         <div class="section-grid">
-            
+
             <?php foreach ($photos1->data as $photo) { ?>
                 <div class="small-4 columns contribution page1">
                     <div class="contribution-inner">

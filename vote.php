@@ -1,17 +1,16 @@
 <?php
-include ("templates/header.php");//inkluderar filen header.php
+include ("templates/header.php"); //inkluderar filen header.php
 include ("functions.php");
 
 $stmt = $mysqli->stmt_init(); 
 if(isset($_GET['contribution_id'])) {
-  $fbUserId = 1;// ska hämtar facebook user's uniqe id
+  $fbUserId = 1; // FB user dummy ID
   $contributionId = $_GET["contribution_id"];
   $vote = 1;
 
-  echo "Vi har en contribution_id:" . $contributionId;
-  echo "<br />";
-  echo "<h2>Tack för din röst!<h2> <br> <h2>Vänta 3 sekonder att automatisk komma tillbaka.<h2>";
-  echo "<script>setTimeout(function(){window.location='http://localhost/MI-nackaforum/'},3000)</script>";
+
+  echo "<h2>Tack för din röst!</h2><h2>Du dirigeras strax om till start.</h2>";
+  header("Refresh: 3; url=index.php");
 
 
     $tasks_sql = "SELECT instagram_id FROM contributions WHERE instagram_id=?";
@@ -19,13 +18,12 @@ if(isset($_GET['contribution_id'])) {
 
     if($stmt -> prepare($tasks_sql)){
       $stmt->bind_param('i', $_GET["contribution_id"]);
-      $stmt->bind_result($instagram_id);// binda ihop result
-      $stmt->execute();//genomför statement
+      $stmt->bind_result($instagram_id); // binda ihop result
+      $stmt->execute(); //genomför statement
 
-      $stmt->store_result();//lagrar resultatet
-      $rows1 = $stmt->num_rows;//Antal rader lagrade i variabel
+      $stmt->store_result(); //lagrar resultatet
+      $rows1 = $stmt->num_rows; //Antal rader lagrade i variabel
 
-      echo "rader".$rows1;
       if ($rows1 !=0) {
         ///////////////////////////////////////////////////////////////
         // ADD ONE VOTE TO A CONTRIBUTION =============================
@@ -38,8 +36,7 @@ if(isset($_GET['contribution_id'])) {
             $stmt->bind_param("s", $contributionId);
             $stmt->execute();
           }
-      }
-      else{
+      } else {
         /////////////////////////////////////////////////////////////////////////
         // ADD THE CONTRIBUTION AS A NEW ROW ==================================== 
           $addContributionSql = "INSERT INTO contributions (instagram_id, votes)
@@ -53,22 +50,17 @@ if(isset($_GET['contribution_id'])) {
 
           $stmt->close();
       }
-
-
-      // $stmt->close();// stänger stmt
-    }else{
-      echo $stmt->error;// felmeddelande om kopplingen till databasen inte fungerar
+      // $stmt->close(); // stänger stmt
+    } else {
+      echo $stmt->error; // felmeddelande om kopplingen till databasen inte fungerar
     }
-
 
 } else {
   // This happens if someone enters the page without clicking vote:
   echo "Det finns inget att se här, gå din väg! <br />";
 }
 
-
 $mysqli->close();
-
 
 ?>
 

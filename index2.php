@@ -1,6 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <?php
 ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
@@ -56,9 +53,7 @@ use Facebook\FacebookPageTabHelper;
 // this line has to be changed according to different app id
 FacebookSession::setDefaultApplication('1386865751606193', 'fb13e2efd82e689be45668113dcaf054');
 $pageHelper = new FacebookPageTabHelper();
- 
-// echo '<p>sida id: ' . $pageHelper->getPageId() . '</p>';
-// echo '<p>admin: ' . $pageHelper->isAdmin() . '</p>';
+
 
 ////////////////// welcome.php ////////////////////////////
 
@@ -66,19 +61,6 @@ $session = $pageHelper->getSession();
 
 if ( isset( $session ) ) {
   
-  //Visa user id
-  // echo 'User Id: ' . $pageHelper->getUserId();
- 
-  // graph api call för att få user data
-  // $request = new FacebookRequest( $session, 'GET', '/me' );
-  // $response = $request->execute();
-  
-  // Hantera svaret
-  // $graphObject = $response->getGraphObject()->asArray();
-  
-  // skriv ut användar objectet
-  // echo '<pre>' . print_r( $graphObject, 1 ) . '</pre>';
-  // echo "Hello Chen";
   include("functions.php");
   include("templates/header.php");
 
@@ -159,11 +141,3 @@ if ( isset( $session ) ) {
 
 
 ?>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
-
-<body>
-</body>
-</html>
