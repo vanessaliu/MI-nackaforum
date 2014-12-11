@@ -30,30 +30,5 @@ function getInstagramPhotosByTag($tag, $client_id, $limit){
   //echo $photos;
 }
 
-/*
-function getAndAddVote($contributionId){
-  include ("connection_db.php");//inkluderar koppling till databasen
-
-  $tasks_sql = "SELECT votes FROM contributions WHERE id=$contributionId";
-
-  $stmt=$mysqli->stmt_init();
-
-  if($stmt->prepare($tasks_sql)){
-    $stmt->bind_result($vote);
-    $stmt->execute();
-
-    // $stmt->store_result();
-    // $rows = $stmt->num_rows;
-    $stmt->close();
-    $mysqli->close();
-
-    $vote = $vote + 1; // not working
-    return $vote;
-    
-  } else {
-    $mysqli->close();//stänger mysqli
-    return 0;//returnerar 0
-  }
-} */
 
 ?>

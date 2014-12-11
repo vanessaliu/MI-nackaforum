@@ -1,5 +1,5 @@
 <?php
-include ("templates/header.php");//inkluderar filen header.php
+include ("templates/header.php");
 include ("functions.php");
 
 
