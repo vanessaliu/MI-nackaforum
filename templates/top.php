@@ -10,10 +10,8 @@
 
     <section>
         <div class="section-grid">
-           
-            
             <?php
-                $tasks_sql = "SELECT instagram_id FROM contributions ORDER BY votes DESC";
+                $tasks_sql = "SELECT instagram_id FROM contributions ORDER BY votes DESC LIMIT 4";
 
                 $stmt=$mysqli->stmt_init();//"myqsli statement" initierar; 
 
@@ -55,7 +53,6 @@
                     echo $stmt->error;
                 }
             ?>
-
         </div>
 
         <div class="clearfix"></div>
