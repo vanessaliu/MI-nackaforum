@@ -30,5 +30,10 @@ function getInstagramPhotosByTag($tag, $client_id, $limit){
   //echo $photos;
 }
 
+function getInstagramPhotoById($media_id, $client_id) {
+    $url = 'https://api.instagram.com/v1/media/' . $media_id . '?client_id=' . $client_id;
+    $photo = json_decode(file_get_contents($url));
+    return $photo;
+}
 
 ?>
