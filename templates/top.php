@@ -11,7 +11,6 @@
     <section>
         <div class="section-grid">
 
-
             <?php
                 $tasks_sql = "SELECT instagram_id FROM contributions ORDER BY votes DESC";
 
@@ -39,10 +38,8 @@
                             </div>
 
                             <div class="contribution-actions">
-                                <!-- if likes->count = 0, addclass inactive to i -->
                                 <div><i class="fi-heart <?php if($photo->data->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->data->likes->count;?></span></i></div>
                                 <div><i class="fi-share"></i></div>
-                                <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                                 <a href="vote.php?contribution_id=<?php echo $photo->data->id;?>" class="uppercase tiny vote-button">Rösta</a>
                             </div>
                         </div>

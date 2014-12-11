@@ -140,14 +140,15 @@ function bindModal() {
         $.ajax({
             url: '/loadImage.php?imageId=' + imageId,
         }).done(function(data) {
-            console.log('data', data);
             $(data).appendTo('body');
             $('.modal-overlay').on('click', function() {
                 $('.modal').remove();
                 $('.modal-overlay').remove();
             });
+            $('.close-modal').on('click', function() {
+                $('.modal').remove();
+                $('.modal-overlay').remove();
+            })
         });
-
-        console.log(imageId);
     });
 }

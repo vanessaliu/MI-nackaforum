@@ -559,6 +559,15 @@ footer {
         font-size: 1em;
         text-overflow: ellipsis;
     }
+    .close-modal {
+        position: absolute;
+        top: .7em;
+        right: .7em;
+        color: $black;
+        font-size: .7em;
+        border-color: black;
+        font-weight: 700;
+    }
     .contribution-image {
         overflow: hidden;
         width: 30em;
