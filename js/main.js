@@ -119,8 +119,11 @@ function menuActiveItem() {
     var url = pieces[pieces.length - 1];
 
     $('li.active').removeClass('active');
-
-    $('li[data-target=' + url + ']').addClass('active');
+    if (url.length) {
+        $('li[data-target=' + url + ']').addClass('active');
+    } else {
+        $('li[data-target="tavla"]').addClass('active');
+    }
 }
 
 function lastGridItemSelector() {
@@ -136,6 +139,7 @@ function modal() {
         $.ajax('/loadImage.php?imageId=' + imageId, function(data) {
             console.log(data);
         });
+        console.log(data);
         console.log(imageId);
         // window.location = 'url?postId=' + id;
     });
