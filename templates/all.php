@@ -4,11 +4,9 @@
     $totalcontributions=count($photoAll->data);
 
     if ($totalcontributions%$picPerPage==0) {
-        $totalPages= $totalcontributions/$picPerPage;
-    // echo "if";
+        $totalPages= $totalcontributions/$picPerPage; 
     }else{
         $totalPages= floor($totalcontributions/$picPerPage)+1;
-    // echo "else";
     }
 
     $photos1 =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', $picPerPage); 
@@ -41,8 +39,10 @@
 
     <section>
         <div class="section-pagination">
-            <p>Total pages: <?php echo $totalPages?></p>
-            <a href="" id="next" >NEXT</a>
+            <p> Totalsidor: <?php echo $totalPages?></p>
+            <a href="" id="prev">Föregående</a>
+            <a href="" id="next">Nästa</a>
+            
 
         </div>
 

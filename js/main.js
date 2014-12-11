@@ -7,9 +7,8 @@
 (function init() {
 
     var page1 = $('.page1'),
-        page2 = $('.page2'),
-        next = $('#next');
-    
+        page2 = $('.page2');
+        
     page2.hide();
     nextPage();
 
@@ -25,15 +24,20 @@
 function nextPage() {
     var page1 = $('.page1'),
         page2 = $('.page2'),
-        next = $('#next');
-
-    // page2.hide();
+        next = $('#next'),
+        prev = $('#prev');
 
     next.on('click', function(event) {
         event.preventDefault();
         page1.hide();
         page2.show();
         console.log('clicked next');
+    });
+    prev.on('click', function(event) {
+        event.preventDefault();
+        page2.hide();
+        page1.show();
+        console.log('clicked prev');
     });
 }
 

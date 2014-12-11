@@ -92,6 +92,9 @@ section .section-pagination { padding: 1.5em 0; }
 
 #section-all section:nth-child(2) p { padding-right: 12em; }
 #section-all .background-image { top: -0.5em; right: -4.8em; background-image: url("../img/chef.png"); }
+#section-all .section-pagination p { position: relative; top: 55px; text-transform: uppercase; font-size: 15px; }
+#section-all .section-pagination a { position: relative; top: 10px; left: 125px; text-transform: uppercase; font-size: 14px; }
+#section-all .section-pagination a:nth-child(3) { left: 140px; }
 
 #section-top section:nth-child(2) p { padding-right: 10.5em; }
 #section-top .background-image { top: -0.5em; right: -4.8em; background-image: url("../img/chef.png"); }
