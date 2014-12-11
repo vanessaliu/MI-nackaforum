@@ -37,7 +37,8 @@ if(isset($_GET['contribution_id'])) {
   }
 
 
-// Look for duplicates in votes table:
+/////////////////////////////////////////////////////////////////////////
+// LOOK FOR DUPLICATES IN VOTES TABLE ===================================
   $checkForDuplicatesSQL = "SELECT user, contribution_id 
                             FROM votes 
                             WHERE user = ? AND contribution_id = ?";
