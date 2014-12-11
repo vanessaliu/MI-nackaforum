@@ -78,13 +78,11 @@
             <?php $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
-                    <div class="contribution-inner">
+                    <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">
 
                         <h5><?php echo $photo->user->full_name; ?></h5>
                         <div class="contribution-image">
-                            <a href="<?php echo $photo->link; ?>" target="_blank">
-                                <img src="<?php echo $photo->images->low_resolution->url; ?>" alt="">
-                            </a>
+                            <img src="<?php echo $photo->images->low_resolution->url; ?>" alt="">
                         </div>
 
                         <div class="contribution-actions">
