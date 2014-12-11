@@ -1,8 +1,8 @@
 <?php
-include ("templates/header.php");
+include ("templates/header.php");//inkluderar filen header.php
 include ("functions.php");
 
-
+$stmt = $mysqli->stmt_init(); 
 if(isset($_GET['contribution_id'])) {
   $fbUserId = 1;// ska hämtar facebook user's uniqe id
   $contributionId = $_GET["contribution_id"];
@@ -16,13 +16,13 @@ if(isset($_GET['contribution_id'])) {
 
 ///////////////////////////////////////////////////////////////
 // ADD ONE VOTE TO A CONTRIBUTION =============================
-  // Works because instagram_id is a unique value in the database
+  // This works because instagram_id is a unique value in the database
   $updateContributiosSQL = "UPDATE contributions
                             SET votes = votes +1 
                             WHERE instagram_id = ?";
-  // looks for the right row! 
-  if($stmt = $mysqli->prepare($updateContributiosSQL)) {
-    $stmt->bind_param("i", $contributionId); // TEST
+  // This looks for the right row! 
+  if($stmt/* = $mysqli*/->prepare($updateContributiosSQL)) {
+    $stmt->bind_param("s", $contributionId);
     $stmt->execute();
   }
 /////////////////////////////////////////////////////////////////////////
@@ -32,9 +32,10 @@ if(isset($_GET['contribution_id'])) {
 
   if($stmt->prepare($addContributionSql)) {
     // echo "Denna fanns INTE i databasen, men har lagts till nu. <br />";
-    $stmt->bind_param("ii", $contributionId, $vote);
+    $stmt->bind_param("si", $contributionId, $vote);
     $stmt->execute();
   }
+
 // // Look for duplicates in votes table:
 //   $checkForDuplicatesSQL = "SELECT user, contribution_id 
 //                             FROM votes 
@@ -61,10 +62,48 @@ if(isset($_GET['contribution_id'])) {
 //       echo "Inlagt i votes";
 //     }
 //   }
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// LOOK FOR DUPLICATES IN VOTES TABLE ===================================
+  $checkForDuplicatesSQL = "SELECT user, contribution_id 
+                            FROM votes 
+                            WHERE user = ? AND contribution_id = ?";
+  $addVoteSQL = "INSERT INTO votes (user, contribution_id) 
+                  VALUES (?,?)";
+
+                 
+  if( $stmt/* = $mysqli*/->prepare($checkForDuplicatesSQL)) {
+    $user_id = 1;
+    $stmt->bind_param("is", $fbUserId, $contributionId);
+    $stmt->execute();
+    $stmt->bind_result($fbUserId, $contributionId);
+    $stmt->store_result();
+    $stmt->fetch();
+    // echo "Funkar if-satsen?"; // Yup, funkar!
+
+    if($stmt->num_rows > 0) {
+      echo "You already voted for this! <br />";
+      // $stmt->close();
+    } else if($stmt->prepare($addVoteSQL)){
+      // $stmt = $mysqli->stmt_init();
+      $stmt->bind_param("is", $fbUserId, $contributionId);
+      $stmt->execute();        
+      // $stmt->close();
+      echo "Inlagt i votes";
+    }
+  }
+  $stmt->close();
+
 } else {
   // This happens if someone enters the page without clicking vote:
   echo "Det finns inget att se här, gå din väg! <br />";
 }
+
+
+$mysqli->close();
+
 
 ?>
 
