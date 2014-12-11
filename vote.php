@@ -11,7 +11,8 @@ if(isset($_GET['contribution_id'])) {
   echo "Vi har en contribution_id:" . $contributionId;
   echo "<br />";
   echo "<h2>Tack för din röst!<h2> <br> <h2>Vänta 3 sekonder att automatisk komma tillbaka.<h2>";
-  echo "<script>setTimeout(function(){window.location='http://localhost/MI-nackaforum/'},3000)</script>";
+  // echo "<script>setTimeout(function(){window.location='index.php'},3000)</script>";
+  header("Refresh: 3; url=index.php");
 
 
     $tasks_sql = "SELECT instagram_id FROM contributions WHERE instagram_id=?";
