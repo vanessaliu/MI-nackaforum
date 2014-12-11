@@ -6,6 +6,13 @@
 
 (function init() {
 
+    var page1 = $('.page1'),
+        page2 = $('.page2'),
+        next = $('#next');
+    
+    page2.hide();
+    nextPage();
+
     menuSwitcher();
     menuRouter();
     menuActiveItem();
@@ -14,6 +21,22 @@
 
     console.log('running');
 })();
+
+function nextPage() {
+    var page1 = $('.page1'),
+        page2 = $('.page2'),
+        next = $('#next');
+
+    // page2.hide();
+
+    next.on('click', function(event) {
+        event.preventDefault();
+        page1.hide();
+        page2.show();
+        console.log('clicked next');
+    });
+}
+
 
 function menuSwitcher() {
     var pages = $('.page');
@@ -90,3 +113,5 @@ function lastGridItemSelector() {
         $(this).find('.columns').last().addClass('end');
     });
 }
+
+ 
