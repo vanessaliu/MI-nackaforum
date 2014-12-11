@@ -28,7 +28,7 @@
                     ?>
 
                     <div class="small-4 columns contribution">
-                        <div class="contribution-inner">
+                        <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">
 
                             <h5><?php echo $photo->data->user->full_name; ?></h5>
                             <div class="contribution-image">

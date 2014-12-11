@@ -50,7 +50,7 @@
 
             <?php foreach ($photos1->data as $photo) { ?>
                 <div class="small-4 columns contribution page1">
-                    <div class="contribution-inner">
+                    <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">
 
                         <h5><?php echo $photo->user->full_name; ?></h5>
                         <div class="contribution-image">

@@ -33,13 +33,11 @@ function nextPage() {
         event.preventDefault();
         page1.hide();
         page2.show();
-        console.log('clicked next');
     });
     prev.on('click', function(event) {
         event.preventDefault();
         page2.hide();
         page1.show();
-        console.log('clicked prev');
     });
 }
 
@@ -53,7 +51,6 @@ function menuSwitcher() {
 
     navItem.on('click', function() {
         var page = $(this).attr('data-target');
-        console.log('pushed', page);
         window.location = '#/' + page;
         menuRouter();
         menuActiveItem();
@@ -61,7 +58,6 @@ function menuSwitcher() {
 
     pageLink.on('click', function() {
         var page = $(this).attr('data-target');
-        console.log('pushed', page);
         window.location = '#/' + page;
         menuRouter();
         menuActiveItem();
@@ -77,8 +73,6 @@ function menuRouter() {
     var path = $(location).attr('href');
     var pieces = path.split('/');
     var url = pieces[pieces.length - 1];
-
-    console.log(path, pieces, url);
 
     switch(url) {
         case 'tavla':
