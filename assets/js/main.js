@@ -27,6 +27,7 @@ function bindPagination() {
         }).done(function(data) {
             $('#section-all').remove();
             $(data).insertAfter('#section-start');
+            lastGridItemSelector();
         });
     });
 }
@@ -113,6 +114,7 @@ function lastGridItemSelector() {
     $('.section-grid').each(function() {
         $(this).find('.columns').last().addClass('end');
     });
+
 }
 
 

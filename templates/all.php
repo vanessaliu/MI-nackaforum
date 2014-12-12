@@ -10,7 +10,7 @@
         $lastImgId = $_GET['lastImgId'];
     }
 
-    $photosForPage = getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', 9, $lastImgId);
+    $photosForPage = getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', $picsPerPage, $lastImgId);
 
     $totalContributions = count($allPhotos->data);
     $numberOfPages = ceil($totalContributions / $picsPerPage);
@@ -37,19 +37,14 @@
             <?php if (isset($photosForPage->pagination->next_max_tag_id)): ?>
                 <a href="/templates/all.php?lastImgId=<?php echo $photosForPage->pagination->next_max_tag_id ;?>&page=<?php echo $page; ?>" id="next">Nästa</a>
             <?php else: ?>
-                <a href="/templates/all.php" id="prev">Första sidan</a>
+                <a href="/templates/all.php" id="prev">Först</a>
             <?php endif; ?>
         </div>
 
         <div class="section-grid">
             <?php foreach ($photosForPage->data as $photo) { ?>
-                <div class="small-4 columns contribution page1">
+                <div class="small-4 columns contribution">
                     <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">
-                        <?php
-                        echo '<pre>';
-                        // var_dump($photo);
-                        echo '</pre>';
-                        ?>
 
                         <h5><?php echo $photo->user->full_name; ?></h5>
                         <div class="contribution-image">
