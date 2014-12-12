@@ -48,9 +48,9 @@
 
                         <h5><?php echo $photo->user->full_name; ?></h5>
                         <div class="contribution-image">
-                            <a href="<?php echo $photo->link; ?>" target="_blank">
+                            <!-- <a href="<?php //echo $photo->link; ?>" target="_blank"> -->
                                 <img src="<?php echo $photo->images->low_resolution->url; ?>" alt="">
-                            </a>
+                            <!-- </a> -->
                         </div>
 
                         <div class="contribution-actions">

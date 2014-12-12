@@ -28,13 +28,13 @@
                     ?>
 
                     <div class="small-4 columns contribution">
-                        <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">
+                        <div data-id="<?php echo $photo->data->id;?>" class="contribution-inner open-modal">
 
                             <h5><?php echo $photo->data->user->full_name; ?></h5>
                             <div class="contribution-image">
-                                <a href="<?php echo $photo->data->link; ?>" target="_blank">
+                                <!-- <a href="<?php //echo $photo->data->link; ?>" target="_blank"> -->
                                     <img src="<?php echo $photo->data->images->low_resolution->url; ?>" alt="">
-                                </a>
+                                <!-- </a> -->
                             </div>
 
                             <div class="contribution-actions">
