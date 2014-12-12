@@ -85,9 +85,9 @@ if ( isset( $session ) ) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/vendor/foundation.min.css" />
-        <link rel="stylesheet" href="css/vendor/foundation-icons.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="assets/css/vendor/foundation.min.css" />
+        <link rel="stylesheet" href="assets/css/vendor/foundation-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
         <!-- FONTS -->
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Raleway:400' rel='stylesheet' type='text/css'>

@@ -75,7 +75,7 @@
         <div class="clearfix"></div>
 
         <div class="section-grid">
-            <?php $photos =  getInstagramPhotosByTag('horses', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
+            <?php $photos =  getInstagramPhotosByTag('birditup2014', '9cd60ab846f743fcbc7a95d4c058dcc4', 9); ?>
             <?php foreach ($photos->data as $photo) { ?>
                 <div class="small-4 columns contribution">
                     <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">

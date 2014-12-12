@@ -50,7 +50,7 @@ nav {
         margin: 0 auto;
         li {
             // FIX RESP
-            padding: 10px 14px;
+            padding: 10px 12px;
             background-color: black;
             list-style-type: 0;
             display: inline-block;
@@ -103,9 +103,11 @@ h1, h3, h4, h5, h6 {
 h2 {
     color: $accentpink;
     font-weight: 700;
+    font-size: 2.2em;
 }
 h3 {
     font-weight: 700;
+    font-size: 1.68rem;
 }
 p {
     color: white;
@@ -284,7 +286,7 @@ section {
                 right: 4px;
             }
             h4{
-                font-size: 17px;
+                font-size: 15px;
                 font-weight: bold;
                 position: relative;
                 top: 54px;
@@ -324,7 +326,7 @@ section {
 #section-welcome {
     h2 {
         padding-top: 0.5em;
-        font-size: 38px;
+        font-size: 35px;
     }
     h3{
         font-size: 30px;
