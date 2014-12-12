@@ -61,7 +61,7 @@ $session = $pageHelper->getSession();
 
 if ( isset( $session ) ) {
 
-  include("functions.php");
+  require_once "functions.php";
   include("templates/header.php");
 
   // different page sections

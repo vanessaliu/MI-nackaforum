@@ -6,15 +6,11 @@
 
 (function init() {
 
-    var page1 = $('.page1'),
-        page2 = $('.page2');
-
-    page2.hide();
-    nextPage();
-
     menuSwitcher();
     menuRouter();
     menuActiveItem();
+
+    bindPagination();
 
     bindModal();
 
@@ -23,24 +19,17 @@
     console.log('running');
 })();
 
-function nextPage() {
-    var page1 = $('.page1'),
-        page2 = $('.page2'),
-        next = $('#next'),
-        prev = $('#prev');
-
-    next.on('click', function(event) {
+function bindPagination() {
+    $('body').on('click', '#next, #prev', function(event) {
         event.preventDefault();
-        page1.hide();
-        page2.show();
-    });
-    prev.on('click', function(event) {
-        event.preventDefault();
-        page2.hide();
-        page1.show();
+        $.ajax({
+            url: $(this).attr('href')
+        }).done(function(data) {
+            $('#section-all').remove();
+            $(data).insertAfter('#section-start');
+        });
     });
 }
-
 
 function menuSwitcher() {
     var pages = $('.page');

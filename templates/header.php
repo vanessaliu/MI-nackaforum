@@ -16,9 +16,6 @@ include ("connection_db.php");//inkluderar koppling till databasen
     <link rel="stylesheet" href="assets/css/vendor/foundation.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/foundation-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- MODERNIZR -->
-    <script src="js/vendor/modernizr.js"></script>
   </head>
 
   <body>
