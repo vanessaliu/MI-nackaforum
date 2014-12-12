@@ -6,15 +6,11 @@
 
 (function init() {
 
-    var page1 = $('.page1'),
-        page2 = $('.page2');
-
-    page2.hide();
-    nextPage();
-
     menuSwitcher();
     menuRouter();
     menuActiveItem();
+
+    bindPagination();
 
     bindModal();
 
@@ -23,26 +19,18 @@
     console.log('running');
 })();
 
-function nextPage() {
-    var page1 = $('.page1'),
-        page2 = $('.page2'),
-        next = $('#next'),
-        prev = $('#prev');
-
-    next.on('click', function(event) {
+function bindPagination() {
+    $('body').on('click', '#next, #prev', function(event) {
         event.preventDefault();
-        page1.hide();
-        page2.show();
-        console.log('clicked next');
-    });
-    prev.on('click', function(event) {
-        event.preventDefault();
-        page2.hide();
-        page1.show();
-        console.log('clicked prev');
+        $.ajax({
+            url: $(this).attr('href')
+        }).done(function(data) {
+            $('#section-all').remove();
+            $(data).insertAfter('#section-start');
+            lastGridItemSelector();
+        });
     });
 }
-
 
 function menuSwitcher() {
     var pages = $('.page');
@@ -53,7 +41,6 @@ function menuSwitcher() {
 
     navItem.on('click', function() {
         var page = $(this).attr('data-target');
-        console.log('pushed', page);
         window.location = '#/' + page;
         menuRouter();
         menuActiveItem();
@@ -61,7 +48,6 @@ function menuSwitcher() {
 
     pageLink.on('click', function() {
         var page = $(this).attr('data-target');
-        console.log('pushed', page);
         window.location = '#/' + page;
         menuRouter();
         menuActiveItem();
@@ -77,8 +63,6 @@ function menuRouter() {
     var path = $(location).attr('href');
     var pieces = path.split('/');
     var url = pieces[pieces.length - 1];
-
-    console.log(path, pieces, url);
 
     switch(url) {
         case 'tavla':
@@ -130,6 +114,7 @@ function lastGridItemSelector() {
     $('.section-grid').each(function() {
         $(this).find('.columns').last().addClass('end');
     });
+
 }
 
 
@@ -140,14 +125,15 @@ function bindModal() {
         $.ajax({
             url: '/loadImage.php?imageId=' + imageId,
         }).done(function(data) {
-            console.log('data', data);
             $(data).appendTo('body');
             $('.modal-overlay').on('click', function() {
                 $('.modal').remove();
                 $('.modal-overlay').remove();
             });
+            $('.close-modal').on('click', function() {
+                $('.modal').remove();
+                $('.modal-overlay').remove();
+            })
         });
-
-        console.log(imageId);
     });
 }

@@ -27,6 +27,7 @@
         <div class="clearfix"></div>
 
         <div class="section-grid">
+
              <?php
                 $tasks_sql = "SELECT instagram_id FROM contributions ORDER BY votes DESC LIMIT 4";
 
@@ -52,6 +53,7 @@
                                     <img src="<?php echo $photo->data->images->low_resolution->url; ?>" alt="">
                                 </a>
                             </div>
+
                         </div>
                     </div>
                     

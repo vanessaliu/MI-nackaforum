@@ -14,7 +14,7 @@ $pink-bg: #e82f8a;  // pink for bg / grid
 $border: #e5e5e5;
 $darktext: #2c2c2c;
 
-$tp-black: rgba(0,0,0,.5);
+$tp-black: rgba(0,0,0,.7);
 
 $bg-gradient: url('../img/bg-gradient.png');
 $bg-chef: url('../img/chef.png');
@@ -22,7 +22,7 @@ $bg-glass: url('../img/glass.png');
 $bg-welcome-glass: url('../img/welcome-glass.png');
 $logo: url('../img/logo.png');
 
-$headingfont: 'Josefin Sans';
-$basefont: 'Raleway';
+$headingfont: 'josefin_sansbold', 'Arial', sans-serif;
+$basefont: 'ralewayregular', 'Arial', sans-serif;
 $sans-serif: 'Arial', sans-serif;
 

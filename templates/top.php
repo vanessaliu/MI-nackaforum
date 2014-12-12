@@ -28,7 +28,7 @@
                     ?>
 
                     <div class="small-4 columns contribution">
-                        <div class="contribution-inner">
+                        <div data-id="<?php echo $photo->id;?>" class="contribution-inner open-modal">
 
                             <h5><?php echo $photo->data->user->full_name; ?></h5>
                             <div class="contribution-image">
@@ -38,10 +38,8 @@
                             </div>
 
                             <div class="contribution-actions">
-                                <!-- if likes->count = 0, addclass inactive to i -->
                                 <div><i class="fi-heart <?php if($photo->data->likes->count == 0){echo 'inactive';} ?>"><span><?php echo $photo->data->likes->count;?></span></i></div>
                                 <div><i class="fi-share"></i></div>
-                                <!-- <button class="uppercase tiny vote-button">Rösta</button> -->
                                 <a href="vote.php?contribution_id=<?php echo $photo->data->id;?>" class="uppercase tiny vote-button">Rösta</a>
                             </div>
                         </div>
